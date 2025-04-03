@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>物理实验 - 学科可视化教学平台</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <div class="app-container mx-auto min-h-screen relative max-w-[393px]">
+        <!-- 顶部导航 -->
+        <header class="px-4 pt-5 pb-4 flex items-center">
+            <a href="index.html" class="p-2 -ml-2 text-gray-700">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+            <h1 class="text-xl font-bold text-gray-800 ml-2">物理实验</h1>
+        </header>
+
+        <main class="px-4 pb-28">
+            <!-- 搜索栏 -->
+            <div class="mb-5">
+                <div class="relative">
+                    <input type="search" placeholder="搜索物理实验" 
+                           class="w-full pl-10 pr-4 py-3 rounded-xl bg-white border border-gray-200 text-sm">
+                    <i class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                </div>
+            </div>
+
+            <!-- 筛选选项 -->
+            <div class="mb-5 overflow-x-auto py-1">
+                <div class="flex space-x-2 min-w-max">
+                    <button class="px-3 py-2 bg-blue-500 text-white rounded-lg text-sm font-medium">
+                        全部
+                    </button>
+                    <button class="px-3 py-2 bg-gray-100 text-gray-700 rounded-lg text-sm font-medium">
+                        力学
+                    </button>
+                    <button class="px-3 py-2 bg-gray-100 text-gray-700 rounded-lg text-sm font-medium">
+                        热学
+                    </button>
+                    <button class="px-3 py-2 bg-gray-100 text-gray-700 rounded-lg text-sm font-medium">
+                        光学
+                    </button>
+                    <button class="px-3 py-2 bg-gray-100 text-gray-700 rounded-lg text-sm font-medium">
+                        电磁学
+                    </button>
+                    <button class="px-3 py-2 bg-gray-100 text-gray-700 rounded-lg text-sm font-medium">
+                        近代物理
+                    </button>
+                </div>
+            </div>
+
+            <!-- 实验列表 -->
+            <section class="space-y-4">
+                <!-- 力学实验组 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm">
+                    <div class="p-3 bg-blue-50 border-b border-blue-100">
+                        <h2 class="font-medium text-blue-800">力学实验</h2>
+                    </div>
+                    
+                    <a href="newton-second-law.html" class="block p-4 border-b border-gray-100">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-arrow-right text-lg text-blue-500"></i>
+                            </div>
+                            <div class="ml-3 flex-1">
+                                <h3 class="text-base font-medium text-gray-800">牛顿第二定律</h3>
+                                <p class="text-xs text-gray-500 mt-1">探索力、质量与加速度的关系</p>
+                            </div>
+                            <i class="fas fa-chevron-right text-gray-300"></i>
+                        </div>
+                    </a>
+                    
+                    <a href="pendulum.html" class="block p-4 border-b border-gray-100">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-exchange-alt text-lg text-blue-500"></i>
+                            </div>
+                            <div class="ml-3 flex-1">
+                                <h3 class="text-base font-medium text-gray-800">单摆实验</h3>
+                                <p class="text-xs text-gray-500 mt-1">研究周期与摆长的关系</p>
+                            </div>
+                            <i class="fas fa-chevron-right text-gray-300"></i>
+                        </div>
+                    </a>
+                    
+                    <a href="spring-oscillator.html" class="block p-4 border-b border-gray-100">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-compress-alt text-lg text-blue-500"></i>
+                            </div>
+                            <div class="ml-3 flex-1">
+                                <h3 class="text-base font-medium text-gray-800">弹簧振子</h3>
+                                <p class="text-xs text-gray-500 mt-1">探究简谐运动规律</p>
+                            </div>
+                            <i class="fas fa-chevron-right text-gray-300"></i>
+                        </div>
+                    </a>
+                    
+                    <a href="inclined-plane.html" class="block p-4">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-angle-double-down text-lg text-blue-500"></i>
+                            </div>
+                            <div class="ml-3 flex-1">
+                                <h3 class="text-base font-medium text-gray-800">斜面运动</h3>
+                                <p class="text-xs text-gray-500 mt-1">研究物体在斜面上的运动</p>
+                            </div>
+                            <i class="fas fa-chevron-right text-gray-300"></i>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- 波动与光学实验组 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm">
+                    <div class="p-3 bg-purple-50 border-b border-purple-100">
+                        <h2 class="font-medium text-purple-800">波动与光学</h2>
+                    </div>
+                    
+                    <a href="wave-interference.html" class="block p-4 border-b border-gray-100">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-water text-lg text-purple-500"></i>
+                            </div>
+                            <div class="ml-3 flex-1">
+                                <h3 class="text-base font-medium text-gray-800">波的干涉</h3>
+                                <p class="text-xs text-gray-500 mt-1">观察波的叠加与干涉现象</p>
+                            </div>
+                            <i class="fas fa-chevron-right text-gray-300"></i>
+                        </div>
+                    </a>
+                    
+                    <a href="light-interference.html" class="block p-4 border-b border-gray-100">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-sun text-lg text-purple-500"></i>
+                            </div>
+                            <div class="ml-3 flex-1">
+                                <h3 class="text-base font-medium text-gray-800">光的干涉</h3>
+                                <p class="text-xs text-gray-500 mt-1">探索光的波动性</p>
+                            </div>
+                            <i class="fas fa-chevron-right text-gray-300"></i>
+                        </div>
+                    </a>
+                    
+                    <a href="sound-wave.html" class="block p-4 border-b border-gray-100">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-volume-up text-lg text-purple-500"></i>
+                            </div>
+                            <div class="ml-3 flex-1">
+                                <h3 class="text-base font-medium text-gray-800">声波实验</h3>
+                                <p class="text-xs text-gray-500 mt-1">研究声波的传播与共振</p>
+                            </div>
+                            <i class="fas fa-chevron-right text-gray-300"></i>
+                        </div>
+                    </a>
+                    
+                    <a href="doppler-effect.html" class="block p-4">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-car-side text-lg text-purple-500"></i>
+                            </div>
+                            <div class="ml-3 flex-1">
+                                <h3 class="text-base font-medium text-gray-800">多普勒效应</h3>
+                                <p class="text-xs text-gray-500 mt-1">探究运动声源的频率变化</p>
+                            </div>
+                            <i class="fas fa-chevron-right text-gray-300"></i>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- 电磁学实验组 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm">
+                    <div class="p-3 bg-yellow-50 border-b border-yellow-100">
+                        <h2 class="font-medium text-yellow-800">电磁学</h2>
+                    </div>
+                    
+                    <a href="circuit.html" class="block p-4 border-b border-gray-100">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-bolt text-lg text-yellow-500"></i>
+                            </div>
+                            <div class="ml-3 flex-1">
+                                <h3 class="text-base font-medium text-gray-800">电路实验</h3>
+                                <p class="text-xs text-gray-500 mt-1">研究电流、电压与电阻的关系</p>
+                            </div>
+                            <i class="fas fa-chevron-right text-gray-300"></i>
+                        </div>
+                    </a>
+                    
+                    <a href="electromagnetic-experiment.html" class="block p-4">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-magnet text-lg text-yellow-500"></i>
+                            </div>
+                            <div class="ml-3 flex-1">
+                                <h3 class="text-base font-medium text-gray-800">电磁感应</h3>
+                                <p class="text-xs text-gray-500 mt-1">探索磁场与电流的相互作用</p>
+                            </div>
+                            <i class="fas fa-chevron-right text-gray-300"></i>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- 近代物理实验组 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm mb-6">
+                    <div class="p-3 bg-red-50 border-b border-red-100">
+                        <h2 class="font-medium text-red-800">近代物理</h2>
+                    </div>
+                    
+                    <a href="photoelectric.html" class="block p-4">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-lightbulb text-lg text-red-500"></i>
+                            </div>
+                            <div class="ml-3 flex-1">
+                                <h3 class="text-base font-medium text-gray-800">光电效应</h3>
+                                <p class="text-xs text-gray-500 mt-1">探究光与电子的相互作用</p>
+                            </div>
+                            <i class="fas fa-chevron-right text-gray-300"></i>
+                        </div>
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <!-- 底部导航栏 -->
+        <footer class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 rounded-t-3xl safe-area-bottom">
+            <div class="mx-auto max-w-[393px]">
+                <nav class="flex justify-around items-center px-8 py-4">
+                    <a href="index.html" class="flex flex-col items-center min-w-[64px]">
+                        <i class="fas fa-home text-gray-400 text-xl mb-1"></i>
+                        <span class="text-xs text-gray-500">首页</span>
+                    </a>
+                    <a href="explore.html" class="flex flex-col items-center min-w-[64px]">
+                        <i class="fas fa-compass text-blue-500 text-xl mb-1"></i>
+                        <span class="text-xs text-blue-500">探索</span>
+                    </a>
+                    <a href="favorites.html" class="flex flex-col items-center min-w-[64px]">
+                        <i class="far fa-bookmark text-gray-400 text-xl mb-1"></i>
+                        <span class="text-xs text-gray-500">收藏</span>
+                    </a>
+                    <a href="profile.html" class="flex flex-col items-center min-w-[64px]">
+                        <i class="far fa-user text-gray-400 text-xl mb-1"></i>
+                        <span class="text-xs text-gray-500">我的</span>
+                    </a>
+                </nav>
+            </div>
+        </footer>
+    </div>
+</body>
+</html> 

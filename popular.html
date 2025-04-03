@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>热门实验 - 学科可视化教学平台</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <div class="app-container mx-auto min-h-screen relative max-w-[393px]">
+        <!-- 顶部导航栏 -->
+        <header class="bg-white shadow-sm sticky top-0 z-10">
+            <div class="px-4 py-4 flex items-center">
+                <a href="explore.html" class="mr-4">
+                    <i class="fas fa-arrow-left text-gray-600"></i>
+                </a>
+                <h1 class="text-xl font-bold text-gray-800">热门实验</h1>
+            </div>
+        </header>
+
+        <!-- 主内容区 -->
+        <main class="px-4 py-4 pb-28">
+            <!-- 筛选标签 -->
+            <div class="flex space-x-2 mb-6 overflow-x-auto pb-2">
+                <button class="px-4 py-2 bg-blue-500 text-white rounded-full text-sm whitespace-nowrap">
+                    全部
+                </button>
+                <button class="px-4 py-2 bg-white text-gray-600 rounded-full text-sm whitespace-nowrap">
+                    力学
+                </button>
+                <button class="px-4 py-2 bg-white text-gray-600 rounded-full text-sm whitespace-nowrap">
+                    电磁学
+                </button>
+                <button class="px-4 py-2 bg-white text-gray-600 rounded-full text-sm whitespace-nowrap">
+                    波动
+                </button>
+                <button class="px-4 py-2 bg-white text-gray-600 rounded-full text-sm whitespace-nowrap">
+                    化学
+                </button>
+                <button class="px-4 py-2 bg-white text-gray-600 rounded-full text-sm whitespace-nowrap">
+                    生物
+                </button>
+            </div>
+
+            <!-- 热门实验列表 -->
+            <div class="space-y-4">
+                <!-- 动量守恒实验 -->
+                <a href="momentum-conservation.html" class="block">
+                    <div class="bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition-all">
+                        <div class="flex items-start">
+                            <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-exchange-alt text-blue-500 text-2xl"></i>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex items-start justify-between mb-2">
+                                    <h3 class="text-lg font-medium text-gray-800">动量守恒</h3>
+                                    <div class="flex items-center">
+                                        <span class="px-2 py-1 bg-blue-100 text-blue-600 text-xs rounded-full">力学</span>
+                                        <span class="ml-2 text-xs text-gray-500">12.5k人学习</span>
+                                    </div>
+                                </div>
+                                <p class="text-gray-600 text-sm mb-3">
+                                    探索碰撞过程中动量如何守恒，观察不同质量物体碰撞的结果。
+                                </p>
+                                <div class="flex justify-between items-center">
+                                    <div class="flex items-center space-x-2">
+                                        <span class="text-yellow-500"><i class="fas fa-star"></i></span>
+                                        <span class="text-yellow-500"><i class="fas fa-star"></i></span>
+                                        <span class="text-yellow-500"><i class="fas fa-star"></i></span>
+                                        <span class="text-yellow-500"><i class="fas fa-star"></i></span>
+                                        <span class="text-yellow-500"><i class="fas fa-star-half-alt"></i></span>
+                                        <span class="text-sm text-gray-500 ml-1">4.5</span>
+                                    </div>
+                                    <button class="text-blue-500 text-sm font-medium">
+                                        开始实验 <i class="fas fa-chevron-right ml-1"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 电磁感应实验 -->
+                <a href="electromagnetic-induction.html" class="block">
+                    <div class="bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition-all">
+                        <div class="flex items-start">
+                            <div class="w-16 h-16 bg-yellow-100 rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-magnet text-yellow-500 text-2xl"></i>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex items-start justify-between mb-2">
+                                    <h3 class="text-lg font-medium text-gray-800">电磁感应</h3>
+                                    <div class="flex items-center">
+                                        <span class="px-2 py-1 bg-yellow-100 text-yellow-600 text-xs rounded-full">电磁学</span>
+                                        <span class="ml-2 text-xs text-gray-500">10.2k人学习</span>
+                                    </div>
+                                </div>
+                                <p class="text-gray-600 text-sm mb-3">
+                                    探索磁场变化与感应电流的关系，理解法拉第电磁感应定律。
+                                </p>
+                                <div class="flex justify-between items-center">
+                                    <div class="flex items-center space-x-2">
+                                        <span class="text-yellow-500"><i class="fas fa-star"></i></span>
+                                        <span class="text-yellow-500"><i class="fas fa-star"></i></span>
+                                        <span class="text-yellow-500"><i class="fas fa-star"></i></span>
+                                        <span class="text-yellow-500"><i class="fas fa-star"></i></span>
+                                        <span class="text-gray-300"><i class="fas fa-star"></i></span>
+                                        <span class="text-sm text-gray-500 ml-1">4.0</span>
+                                    </div>
+                                    <button class="text-blue-500 text-sm font-medium">
+                                        开始实验 <i class="fas fa-chevron-right ml-1"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- 波的干涉实验 -->
+                <a href="wave-interference.html" class="block">
+                    <div class="bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition-all">
+                        <div class="flex items-start">
+                            <div class="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-wave-square text-green-500 text-2xl"></i>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex items-start justify-between mb-2">
+                                    <h3 class="text-lg font-medium text-gray-800">波的干涉</h3>
+                                    <div class="flex items-center">
+                                        <span class="px-2 py-1 bg-green-100 text-green-600 text-xs rounded-full">波动</span>
+                                        <span class="ml-2 text-xs text-gray-500">8.7k人学习</span>
+                                    </div>
+                                </div>
+                                <p class="text-gray-600 text-sm mb-3">
+                                    观察波的叠加与干涉现象，理解波的基本性质。
+                                </p>
+                                <div class="flex justify-between items-center">
+                                    <div class="flex items-center space-x-2">
+                                        <span class="text-yellow-500"><i class="fas fa-star"></i></span>
+                                        <span class="text-yellow-500"><i class="fas fa-star"></i></span>
+                                        <span class="text-yellow-500"><i class="fas fa-star"></i></span>
+                                        <span class="text-yellow-500"><i class="fas fa-star"></i></span>
+                                        <span class="text-yellow-500"><i class="fas fa-star"></i></span>
+                                        <span class="text-sm text-gray-500 ml-1">5.0</span>
+                                    </div>
+                                    <button class="text-blue-500 text-sm font-medium">
+                                        开始实验 <i class="fas fa-chevron-right ml-1"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- 添加推荐实验部分 -->
+            <section class="mt-8">
+                <h2 class="text-lg font-bold text-gray-800 mb-4">为你推荐</h2>
+                <div class="grid grid-cols-2 gap-4">
+                    <a href="photoelectric.html" class="block">
+                        <div class="bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition-all">
+                            <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-3">
+                                <i class="fas fa-sun text-purple-500 text-xl"></i>
+                            </div>
+                            <h3 class="text-base font-medium text-gray-800 mb-1">光电效应</h3>
+                            <p class="text-xs text-gray-500">探索光与电子的相互作用</p>
+                            <div class="mt-2 flex items-center">
+                                <span class="text-xs text-gray-500">5.6k人学习</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="sound-wave.html" class="block">
+                        <div class="bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition-all">
+                            <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-3">
+                                <i class="fas fa-volume-up text-blue-500 text-xl"></i>
+                            </div>
+                            <h3 class="text-base font-medium text-gray-800 mb-1">声波实验</h3>
+                            <p class="text-xs text-gray-500">探索声波传播规律</p>
+                            <div class="mt-2 flex items-center">
+                                <span class="text-xs text-gray-500">4.8k人学习</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <!-- 底部导航栏 -->
+        <footer class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 rounded-t-3xl safe-area-bottom">
+            <div class="mx-auto max-w-[393px]">
+                <nav class="flex justify-around items-center px-8 py-4">
+                    <a href="index.html" class="flex flex-col items-center min-w-[64px]">
+                        <i class="fas fa-home text-gray-400 text-xl mb-1"></i>
+                        <span class="text-xs text-gray-500">首页</span>
+                    </a>
+                    <a href="explore.html" class="flex flex-col items-center min-w-[64px]">
+                        <i class="fas fa-compass text-blue-500 text-xl mb-1"></i>
+                        <span class="text-xs text-blue-500">探索</span>
+                    </a>
+                    <a href="favorites.html" class="flex flex-col items-center min-w-[64px]">
+                        <i class="far fa-bookmark text-gray-400 text-xl mb-1"></i>
+                        <span class="text-xs text-gray-500">收藏</span>
+                    </a>
+                    <a href="profile.html" class="flex flex-col items-center min-w-[64px]">
+                        <i class="far fa-user text-gray-400 text-xl mb-1"></i>
+                        <span class="text-xs text-gray-500">我的</span>
+                    </a>
+                </nav>
+            </div>
+        </footer>
+    </div>
+</body>
+</html> 

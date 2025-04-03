@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>能量守恒实验 - 学科可视化教学平台</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0 auto;
+            min-height: 100vh;
+            background: #F3F4F6;
+        }
+        .safe-area-bottom {
+            padding-bottom: env(safe-area-inset-bottom);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+    <div class="app-container mx-auto bg-gray-50 min-h-screen relative max-w-[393px]">
+        <!-- 顶部导航栏 -->
+        <header class="bg-white shadow-sm sticky top-0 z-10 rounded-b-xl">
+            <div class="px-4 py-4 flex items-center">
+                <a href="energy-conservation.html" class="mr-4">
+                    <i class="fas fa-arrow-left text-gray-600"></i>
+                </a>
+                <h1 class="text-xl font-bold text-gray-800">能量守恒实验</h1>
+            </div>
+        </header>
+
+        <!-- 主内容区 -->
+        <main class="px-4 py-4 pb-28">
+            <!-- 实验显示区 -->
+            <section class="mb-6">
+                <div class="bg-blue-50 rounded-xl h-52 flex items-center justify-center mb-3 relative">
+                    <!-- 模拟区域 -->
+                    <div class="w-full px-6 h-full relative flex items-center">
+                        <!-- 斜面 -->
+                        <div class="absolute bottom-0 left-0 w-full h-36 overflow-hidden">
+                            <div class="absolute bottom-0 left-0 w-full h-64 bg-gray-200 rounded-full" style="transform: rotate(-10deg); transform-origin: bottom left;"></div>
+                        </div>
+                        <!-- 小球 -->
+                        <div class="w-8 h-8 bg-blue-500 rounded-full absolute left-16 bottom-28 shadow-md"></div>
+                        <!-- 能量指示器 -->
+                        <div class="absolute top-3 right-3 flex flex-col items-end space-y-1">
+                            <div class="text-xs text-blue-600">势能: 0.98 J</div>
+                            <div class="text-xs text-green-600">动能: 0.00 J</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 实验参数控制区 -->
+            <section class="mb-6 bg-white rounded-xl shadow-sm p-4">
+                <h2 class="text-lg font-bold text-gray-800 mb-3">实验参数</h2>
+                
+                <!-- 实验模式选择 -->
+                <div class="mb-4">
+                    <label class="block text-sm font-medium text-gray-700 mb-2">实验模式</label>
+                    <select class="block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                        <option value="frictionless">无摩擦斜面</option>
+                        <option value="friction">有摩擦斜面</option>
+                        <option value="spring">弹簧振子</option>
+                    </select>
+                </div>
+                
+                <!-- 质量参数 -->
+                <div class="mb-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <label class="text-sm font-medium text-gray-700">小球质量 (kg)</label>
+                        <span class="text-sm text-blue-600 font-mono">0.1</span>
+                    </div>
+                    <input type="range" min="0.01" max="1" step="0.01" value="0.1" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-500">
+                </div>
+                
+                <!-- 初始高度参数 -->
+                <div class="mb-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <label class="text-sm font-medium text-gray-700">初始高度 (m)</label>
+                        <span class="text-sm text-blue-600 font-mono">1.0</span>
+                    </div>
+                    <input type="range" min="0.1" max="2" step="0.1" value="1" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-500">
+                </div>
+                
+                <!-- 摩擦系数参数 -->
+                <div class="mb-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <label class="text-sm font-medium text-gray-700">摩擦系数</label>
+                        <span class="text-sm text-blue-600 font-mono">0.0</span>
+                    </div>
+                    <input type="range" min="0" max="0.5" step="0.01" value="0" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-500">
+                </div>
+                
+                <!-- 显示选项 -->
+                <div class="mt-4">
+                    <label class="block text-sm font-medium text-gray-700 mb-2">显示选项</label>
+                    <div class="space-y-2">
+                        <div class="flex items-center">
+                            <input type="checkbox" id="show-vectors" class="w-4 h-4 text-blue-600 rounded border-gray-300 focus:ring-blue-500" checked>
+                            <label for="show-vectors" class="ml-2 text-sm text-gray-700">显示速度向量</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input type="checkbox" id="show-energy" class="w-4 h-4 text-blue-600 rounded border-gray-300 focus:ring-blue-500" checked>
+                            <label for="show-energy" class="ml-2 text-sm text-gray-700">显示能量值</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input type="checkbox" id="show-trace" class="w-4 h-4 text-blue-600 rounded border-gray-300 focus:ring-blue-500">
+                            <label for="show-trace" class="ml-2 text-sm text-gray-700">显示运动轨迹</label>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 能量测量结果区 -->
+            <section class="mb-6 bg-white rounded-xl shadow-sm p-4">
+                <h2 class="text-lg font-bold text-gray-800 mb-3">能量测量</h2>
+                
+                <div class="space-y-2 mb-4">
+                    <div class="flex justify-between items-center">
+                        <span class="text-gray-600">势能 (Ep)</span>
+                        <span class="font-mono text-blue-600">0.981 J</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-gray-600">动能 (Ek)</span>
+                        <span class="font-mono text-green-600">0.000 J</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-gray-600">总机械能 (E)</span>
+                        <span class="font-mono text-indigo-600">0.981 J</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-gray-600">能量守恒误差</span>
+                        <span class="font-mono text-green-600">0.000%</span>
+                    </div>
+                </div>
+                
+                <!-- 能量柱状图 -->
+                <div class="mt-4 h-16 flex items-end space-x-4 px-2">
+                    <div class="relative h-full flex flex-col items-center justify-end">
+                        <div class="w-12 bg-blue-500 rounded-t" style="height: 100%;"></div>
+                        <span class="text-xs mt-1 text-gray-600">势能</span>
+                    </div>
+                    <div class="relative h-full flex flex-col items-center justify-end">
+                        <div class="w-12 bg-green-500 rounded-t" style="height: 0%;"></div>
+                        <span class="text-xs mt-1 text-gray-600">动能</span>
+                    </div>
+                    <div class="relative h-full flex flex-col items-center justify-end">
+                        <div class="w-12 bg-indigo-500 rounded-t" style="height: 100%;"></div>
+                        <span class="text-xs mt-1 text-gray-600">总能量</span>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 实验原理说明 -->
+            <section class="bg-blue-50 rounded-xl shadow-sm p-4 mb-4">
+                <h3 class="text-base font-bold text-blue-800 mb-3">实验原理</h3>
+                
+                <p class="text-sm text-gray-700 mb-3">
+                    能量守恒定律表明：在没有外力做功的封闭系统中，机械能总量保持不变，虽然能量可以从一种形式转换为另一种形式。
+                </p>
+                
+                <div class="bg-blue-100 rounded-xl p-3">
+                    <p class="text-sm text-blue-800 font-medium mb-1">机械能守恒</p>
+                    <p class="text-sm text-blue-700">
+                        物体在只有重力作用的情况下，其动能和势能之和（机械能）保持不变：
+                    </p>
+                    <p class="text-center font-mono text-blue-800 my-2">
+                        E = Ep + Ek = mgh + (1/2)mv² = 常量
+                    </p>
+                </div>
+            </section>
+            
+            <!-- 实验说明 -->
+            <section class="bg-white rounded-xl shadow-sm p-4 mb-4">
+                <h3 class="text-base font-bold text-gray-800 mb-3">实验说明</h3>
+                
+                <ol class="text-sm text-gray-700 space-y-2 list-decimal pl-5">
+                    <li>调整小球的质量和初始高度参数</li>
+                    <li>选择不同的实验模式观察能量转换</li>
+                    <li>点击"开始"按钮启动模拟</li>
+                    <li>观察小球运动过程中势能和动能的变化</li>
+                    <li>分析能量柱状图验证能量守恒定律</li>
+                </ol>
+            </section>
+            
+            <!-- 思考问题 -->
+            <section class="bg-yellow-50 rounded-xl shadow-sm p-4 mb-6">
+                <h3 class="text-base font-bold text-yellow-800 mb-3">思考问题</h3>
+                
+                <ul class="text-sm text-gray-700 space-y-2">
+                    <li class="flex items-start">
+                        <span class="text-yellow-500 mr-2">•</span>
+                        <span>如果增加摩擦力，能量守恒关系会发生什么变化？为什么？</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-yellow-500 mr-2">•</span>
+                        <span>在弹簧振子模式下，能量在哪几种形式之间转换？各自的表达式是什么？</span>
+                    </li>
+                </ul>
+            </section>
+        </main>
+
+        <!-- 实验控制按钮 -->
+        <div class="fixed bottom-24 left-4 right-4 max-w-[393px] mx-auto z-10">
+            <div class="flex space-x-4">
+                <button class="flex-1 bg-blue-500 text-white py-3 rounded-xl font-medium shadow-lg hover:bg-blue-600 transition-all">
+                    <i class="fas fa-play mr-1"></i> 开始
+                </button>
+                <button class="flex-1 bg-gray-200 text-gray-700 py-3 rounded-xl font-medium hover:bg-gray-300 transition-all">
+                    <i class="fas fa-redo mr-1"></i> 重置
+                </button>
+            </div>
+        </div>
+
+        <!-- 底部导航栏 -->
+        <footer class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 rounded-t-3xl max-w-[393px] mx-auto z-20">
+            <div class="footer-safe-area safe-area-bottom">
+                <nav class="flex justify-around items-center px-6 py-4">
+                    <a href="index.html" class="flex flex-col items-center min-w-[64px]">
+                        <i class="fas fa-home text-gray-400 text-xl mb-1"></i>
+                        <span class="text-xs text-gray-500">首页</span>
+                    </a>
+                    <a href="explore.html" class="flex flex-col items-center min-w-[64px]">
+                        <i class="fas fa-compass text-blue-500 text-xl mb-1"></i>
+                        <span class="text-xs text-blue-500">探索</span>
+                    </a>
+                    <a href="favorites.html" class="flex flex-col items-center min-w-[64px]">
+                        <i class="far fa-bookmark text-gray-400 text-xl mb-1"></i>
+                        <span class="text-xs text-gray-500">收藏</span>
+                    </a>
+                    <a href="profile.html" class="flex flex-col items-center min-w-[64px]">
+                        <i class="far fa-user text-gray-400 text-xl mb-1"></i>
+                        <span class="text-xs text-gray-500">我的</span>
+                    </a>
+                </nav>
+            </div>
+        </footer>
+    </div>
+</body>
+</html> 

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>设置 - 学科可视化教学平台</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <div class="app-container mx-auto min-h-screen relative max-w-[393px]">
+        <!-- 顶部导航栏 -->
+        <header class="bg-white shadow-sm sticky top-0 z-10">
+            <div class="px-4 py-4 flex items-center">
+                <a href="profile.html" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 mr-2">
+                    <i class="fas fa-arrow-left text-gray-500"></i>
+                </a>
+                <h1 class="text-xl font-bold text-gray-800">设置</h1>
+            </div>
+        </header>
+
+        <main class="px-4 py-4 pb-28">
+            <!-- 个人信息设置 -->
+            <section class="mb-6">
+                <h2 class="text-sm font-medium text-gray-500 px-2 mb-2">个人信息</h2>
+                <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+                    <div class="p-4 flex items-center">
+                        <div class="w-14 h-14 bg-blue-100 rounded-full overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?w=56&h=56&fit=crop" alt="用户头像" class="w-full h-full object-cover">
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-base font-medium text-gray-800">李明同学</h3>
+                            <p class="text-sm text-gray-500">初二三班</p>
+                        </div>
+                        <button class="ml-auto text-blue-500 text-sm">
+                            编辑
+                        </button>
+                    </div>
+                    <div class="border-t border-gray-100"></div>
+                    <a href="#" class="flex items-center justify-between p-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-id-card text-gray-500 w-6"></i>
+                            <span class="text-gray-800 ml-3">个人资料</span>
+                        </div>
+                        <i class="fas fa-chevron-right text-gray-300"></i>
+                    </a>
+                    <div class="border-t border-gray-100"></div>
+                    <a href="#" class="flex items-center justify-between p-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-graduation-cap text-gray-500 w-6"></i>
+                            <span class="text-gray-800 ml-3">学习信息</span>
+                        </div>
+                        <i class="fas fa-chevron-right text-gray-300"></i>
+                    </a>
+                </div>
+            </section>
+
+            <!-- 学习设置 -->
+            <section class="mb-6">
+                <h2 class="text-sm font-medium text-gray-500 px-2 mb-2">学习设置</h2>
+                <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+                    <a href="#" class="flex items-center justify-between p-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-bell text-gray-500 w-6"></i>
+                            <span class="text-gray-800 ml-3">学习提醒</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="text-gray-500 text-sm mr-2">每天18:00</span>
+                            <i class="fas fa-chevron-right text-gray-300"></i>
+                        </div>
+                    </a>
+                    <div class="border-t border-gray-100"></div>
+                    <div class="flex items-center justify-between p-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-clock text-gray-500 w-6"></i>
+                            <span class="text-gray-800 ml-3">每日学习目标</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="text-gray-500 text-sm mr-2">30分钟</span>
+                            <i class="fas fa-chevron-right text-gray-300"></i>
+                        </div>
+                    </div>
+                    <div class="border-t border-gray-100"></div>
+                    <div class="flex items-center justify-between p-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-language text-gray-500 w-6"></i>
+                            <span class="text-gray-800 ml-3">语言</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="text-gray-500 text-sm mr-2">简体中文</span>
+                            <i class="fas fa-chevron-right text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 应用设置 -->
+            <section class="mb-6">
+                <h2 class="text-sm font-medium text-gray-500 px-2 mb-2">应用设置</h2>
+                <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+                    <div class="flex items-center justify-between p-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-download text-gray-500 w-6"></i>
+                            <span class="text-gray-800 ml-3">离线下载</span>
+                        </div>
+                        <label class="relative inline-flex items-center cursor-pointer">
+                            <input type="checkbox" class="sr-only peer" checked>
+                            <div class="w-9 h-5 bg-gray-200 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-blue-500"></div>
+                        </label>
+                    </div>
+                    <div class="border-t border-gray-100"></div>
+                    <div class="flex items-center justify-between p-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-mobile-alt text-gray-500 w-6"></i>
+                            <span class="text-gray-800 ml-3">仅在WIFI下加载视频</span>
+                        </div>
+                        <label class="relative inline-flex items-center cursor-pointer">
+                            <input type="checkbox" class="sr-only peer">
+                            <div class="w-9 h-5 bg-gray-200 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-blue-500"></div>
+                        </label>
+                    </div>
+                    <div class="border-t border-gray-100"></div>
+                    <div class="flex items-center justify-between p-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-moon text-gray-500 w-6"></i>
+                            <span class="text-gray-800 ml-3">深色模式</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="text-gray-500 text-sm mr-2">跟随系统</span>
+                            <i class="fas fa-chevron-right text-gray-300"></i>
+                        </div>
+                    </div>
+                    <div class="border-t border-gray-100"></div>
+                    <div class="flex items-center justify-between p-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-trash-alt text-gray-500 w-6"></i>
+                            <span class="text-gray-800 ml-3">清除缓存</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="text-gray-500 text-sm mr-2">56.2MB</span>
+                            <i class="fas fa-chevron-right text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 关于我们 -->
+            <section class="mb-6">
+                <h2 class="text-sm font-medium text-gray-500 px-2 mb-2">关于</h2>
+                <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+                    <a href="#" class="flex items-center justify-between p-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-info-circle text-gray-500 w-6"></i>
+                            <span class="text-gray-800 ml-3">关于我们</span>
+                        </div>
+                        <i class="fas fa-chevron-right text-gray-300"></i>
+                    </a>
+                    <div class="border-t border-gray-100"></div>
+                    <a href="#" class="flex items-center justify-between p-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-question-circle text-gray-500 w-6"></i>
+                            <span class="text-gray-800 ml-3">帮助与反馈</span>
+                        </div>
+                        <i class="fas fa-chevron-right text-gray-300"></i>
+                    </a>
+                    <div class="border-t border-gray-100"></div>
+                    <a href="#" class="flex items-center justify-between p-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-file-alt text-gray-500 w-6"></i>
+                            <span class="text-gray-800 ml-3">隐私政策</span>
+                        </div>
+                        <i class="fas fa-chevron-right text-gray-300"></i>
+                    </a>
+                    <div class="border-t border-gray-100"></div>
+                    <div class="flex items-center justify-between p-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-code text-gray-500 w-6"></i>
+                            <span class="text-gray-800 ml-3">当前版本</span>
+                        </div>
+                        <span class="text-gray-500 text-sm">v1.2.3</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 退出登录按钮 -->
+            <section class="mt-8">
+                <button class="w-full py-3 bg-white text-red-500 font-medium rounded-xl shadow-sm">
+                    退出登录
+                </button>
+            </section>
+        </main>
+    </div>
+</body>
+</html> 

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>牛顿摆 - 物理可视化教学平台</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0 auto;
+            min-height: 100vh;
+            background: #F3F4F6;
+        }
+        .safe-area-bottom {
+            padding-bottom: env(safe-area-inset-bottom);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+    <div class="mx-auto max-w-[393px] bg-white min-h-screen pb-16 relative">
+        <!-- 顶部导航栏 -->
+        <header class="bg-white shadow-sm px-4 py-3 sticky top-0 z-10 rounded-b-xl">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <a href="mechanics.html" class="text-gray-600 mr-4">
+                        <i class="fas fa-arrow-left text-lg"></i>
+                    </a>
+                    <h1 class="text-xl font-bold text-gray-800">牛顿摆</h1>
+                </div>
+                <div>
+                    <a href="index.html" class="text-gray-600">
+                        <i class="fas fa-home text-lg"></i>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- 主内容区 -->
+        <main class="px-4 py-4">
+            <!-- 实验可视化区域 -->
+            <section class="mb-6">
+                <div class="bg-blue-50 rounded-xl h-48 flex items-center justify-center mb-4">
+                    <div class="relative h-full w-full flex items-center justify-center">
+                        <!-- 牛顿摆架 -->
+                        <div class="w-4/5 h-6 bg-gray-300 rounded-full absolute top-6"></div>
+                        <!-- 悬挂线 -->
+                        <div class="flex space-x-3 absolute top-6">
+                            <div class="w-0.5 h-20 bg-gray-400 transform -rotate-20 origin-top"></div>
+                            <div class="w-0.5 h-20 bg-gray-400"></div>
+                            <div class="w-0.5 h-20 bg-gray-400"></div>
+                            <div class="w-0.5 h-20 bg-gray-400"></div>
+                            <div class="w-0.5 h-20 bg-gray-400"></div>
+                        </div>
+                        <!-- 小球 -->
+                        <div class="flex space-x-1 absolute" style="top: 90px;">
+                            <div class="w-8 h-8 bg-blue-500 rounded-full shadow-md"></div>
+                            <div class="w-8 h-8 bg-blue-500 rounded-full shadow-md"></div>
+                            <div class="w-8 h-8 bg-blue-500 rounded-full shadow-md"></div>
+                            <div class="w-8 h-8 bg-blue-500 rounded-full shadow-md"></div>
+                            <div class="w-8 h-8 bg-blue-500 rounded-full shadow-md"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center mb-4">
+                    <button class="bg-blue-500 text-white px-6 py-2 rounded-xl font-medium shadow-md hover:bg-blue-600 transition duration-300">
+                        开始实验
+                    </button>
+                </div>
+            </section>
+
+            <!-- 选择实验模型 -->
+            <section class="mb-6">
+                <h2 class="text-lg font-bold text-gray-800 mb-3">选择实验模型</h2>
+                <div class="grid grid-cols-2 gap-3">
+                    <div class="bg-white rounded-xl shadow-sm p-3 hover:shadow-md transition duration-300 cursor-pointer border-2 border-blue-500">
+                        <div class="flex flex-col items-center">
+                            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-2">
+                                <i class="fas fa-exchange-alt text-blue-500"></i>
+                            </div>
+                            <span class="text-sm font-medium text-gray-800">标准牛顿摆</span>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-sm p-3 hover:shadow-md transition duration-300 cursor-pointer">
+                        <div class="flex flex-col items-center">
+                            <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mb-2">
+                                <i class="fas fa-weight-hanging text-gray-500"></i>
+                            </div>
+                            <span class="text-sm font-medium text-gray-800">不同质量碰撞</span>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-sm p-3 hover:shadow-md transition duration-300 cursor-pointer">
+                        <div class="flex flex-col items-center">
+                            <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mb-2">
+                                <i class="fas fa-ruler-combined text-gray-500"></i>
+                            </div>
+                            <span class="text-sm font-medium text-gray-800">多球碰撞</span>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-sm p-3 hover:shadow-md transition duration-300 cursor-pointer">
+                        <div class="flex flex-col items-center">
+                            <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mb-2">
+                                <i class="fas fa-percent text-gray-500"></i>
+                            </div>
+                            <span class="text-sm font-medium text-gray-800">能量损失对比</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 实验基本原理 -->
+            <section class="mb-6 bg-white rounded-xl shadow-sm p-4">
+                <h2 class="text-lg font-bold text-gray-800 mb-3">基本原理</h2>
+                <p class="text-sm text-gray-600 mb-3">
+                    牛顿摆是一种经典的物理演示装置，完美展示了动量守恒和能量守恒定律。当一端的小球释放后，动量和能量通过碰撞传递到另一端的小球。
+                </p>
+                <div class="bg-blue-50 rounded-xl p-3 mb-3">
+                    <h3 class="text-base font-medium text-blue-800 mb-2">动量守恒</h3>
+                    <p class="text-sm text-gray-700 mb-2">牛顿摆中，碰撞前后总动量相等：</p>
+                    <div class="bg-white rounded-xl p-2 text-center text-blue-800 font-mono">
+                        m₁v₁ = m₂v₂
+                    </div>
+                    <p class="text-xs text-gray-600 mt-2">当所有小球质量相同时，释放一个小球会导致另一端的一个小球以相同速度弹出</p>
+                </div>
+                <p class="text-sm text-gray-600">
+                    在完全弹性碰撞的情况下，不仅动量守恒，能量也守恒。牛顿摆中小球间的碰撞接近完全弹性碰撞，因此最初释放的小球传递其全部动量和能量给其他小球，直到最终达到另一端。
+                </p>
+            </section>
+
+            <!-- 应用场景 -->
+            <section class="mb-6 bg-white rounded-xl shadow-sm p-4">
+                <h2 class="text-lg font-bold text-gray-800 mb-3">应用场景</h2>
+                <div class="space-y-3">
+                    <div class="flex items-start">
+                        <div class="w-10 h-10 bg-blue-100 rounded-full flex-shrink-0 flex items-center justify-center mr-3">
+                            <i class="fas fa-graduation-cap text-blue-500"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-base font-medium text-gray-800 mb-1">物理教学</h3>
+                            <p class="text-sm text-gray-600">
+                                作为直观演示动量守恒和能量守恒的经典教具，广泛用于各级物理教育。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-10 h-10 bg-blue-100 rounded-full flex-shrink-0 flex items-center justify-center mr-3">
+                            <i class="fas fa-desktop text-blue-500"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-base font-medium text-gray-800 mb-1">碰撞模拟</h3>
+                            <p class="text-sm text-gray-600">
+                                在计算机模拟和游戏物理引擎中，使用类似原理模拟物体之间的碰撞行为。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-10 h-10 bg-blue-100 rounded-full flex-shrink-0 flex items-center justify-center mr-3">
+                            <i class="fas fa-cogs text-blue-500"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-base font-medium text-gray-800 mb-1">机械工程</h3>
+                            <p class="text-sm text-gray-600">
+                                在设计撞击吸收系统和动力传输装置时，应用牛顿摆的原理优化能量传递。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 关键概念 -->
+            <section class="bg-white rounded-xl shadow-sm p-4 mb-4">
+                <h2 class="text-lg font-bold text-gray-800 mb-3">关键概念</h2>
+                <div class="space-y-3">
+                    <div class="bg-gray-50 rounded-xl p-3">
+                        <h3 class="text-base font-medium text-gray-800 mb-1">弹性碰撞</h3>
+                        <p class="text-sm text-gray-600">
+                            碰撞中动能和动量都守恒的碰撞类型，无能量损失转化为热能或声能。
+                        </p>
+                    </div>
+                    <div class="bg-gray-50 rounded-xl p-3">
+                        <h3 class="text-base font-medium text-gray-800 mb-1">动量传递</h3>
+                        <p class="text-sm text-gray-600">
+                            碰撞过程中物体之间动量的转移，牛顿摆中体现为连续的动量传递过程。
+                        </p>
+                    </div>
+                    <div class="bg-gray-50 rounded-xl p-3">
+                        <h3 class="text-base font-medium text-gray-800 mb-1">简谐运动</h3>
+                        <p class="text-sm text-gray-600">
+                            牛顿摆中每个小球在摆动时都做简谐运动，遵循特定的周期规律。
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 开始实验按钮 -->
+            <div class="flex justify-center mb-6">
+                <a href="#" class="bg-blue-500 text-white px-8 py-3 rounded-xl font-medium shadow-md hover:bg-blue-600 transition duration-300 flex items-center">
+                    <i class="fas fa-flask mr-2"></i>
+                    开始实验
+                </a>
+            </div>
+        </main>
+
+        <!-- 底部导航栏 -->
+        <footer class="fixed bottom-0 w-full bg-white border-t border-gray-200 max-w-[393px] rounded-t-3xl z-20">
+            <div class="flex justify-around items-center px-6 py-4 safe-area-bottom">
+                <a href="index.html" class="flex flex-col items-center min-w-[64px]">
+                    <i class="fas fa-home text-gray-400 text-xl mb-1"></i>
+                    <span class="text-xs text-gray-500">首页</span>
+                </a>
+                <a href="explore.html" class="flex flex-col items-center min-w-[64px]">
+                    <i class="fas fa-compass text-blue-500 text-xl mb-1"></i>
+                    <span class="text-xs text-blue-500">探索</span>
+                </a>
+                <a href="favorites.html" class="flex flex-col items-center min-w-[64px]">
+                    <i class="far fa-bookmark text-gray-400 text-xl mb-1"></i>
+                    <span class="text-xs text-gray-500">收藏</span>
+                </a>
+                <a href="profile.html" class="flex flex-col items-center min-w-[64px]">
+                    <i class="far fa-user text-gray-400 text-xl mb-1"></i>
+                    <span class="text-xs text-gray-500">我的</span>
+                </a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html> 

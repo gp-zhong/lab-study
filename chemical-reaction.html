@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>化学反应实验 - 学科可视化教学平台</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <div class="app-container mx-auto min-h-screen relative max-w-[393px]">
+        <main class="px-4 py-4 pb-28">
+            <!-- 实验可视化区域 -->
+            <section class="bg-white rounded-2xl p-4 shadow-sm mb-6">
+                <div class="aspect-video bg-gray-100 rounded-xl mb-4 relative">
+                    <!-- 化学反应模拟区域 -->
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="text-sm text-gray-400">化学反应模拟区域</div>
+                    </div>
+                </div>
+                
+                <!-- 实验类型选择 -->
+                <div class="flex space-x-2 mb-4 overflow-x-auto py-1">
+                    <button class="flex-none py-2 px-3 bg-blue-500 text-white rounded-lg text-sm font-medium whitespace-nowrap">
+                        酸碱中和
+                    </button>
+                    <button class="flex-none py-2 px-3 bg-gray-100 text-gray-700 rounded-lg text-sm font-medium whitespace-nowrap">
+                        氧化还原
+                    </button>
+                    <button class="flex-none py-2 px-3 bg-gray-100 text-gray-700 rounded-lg text-sm font-medium whitespace-nowrap">
+                        沉淀反应
+                    </button>
+                    <button class="flex-none py-2 px-3 bg-gray-100 text-gray-700 rounded-lg text-sm font-medium whitespace-nowrap">
+                        气体生成
+                    </button>
+                </div>
+                
+                <!-- 参数控制区 -->
+                <div class="space-y-4">
+                    <!-- 试剂选择 -->
+                    <div class="bg-blue-50 rounded-xl p-4">
+                        <h3 class="text-sm font-medium text-blue-800 mb-3">试剂选择</h3>
+                        <div class="space-y-3">
+                            <div>
+                                <label class="text-sm font-medium text-gray-700 mb-2 block">
+                                    试剂A
+                                </label>
+                                <select class="w-full px-3 py-2 bg-white border border-gray-300 rounded-lg text-sm text-gray-700">
+                                    <option value="hcl">盐酸 (HCl)</option>
+                                    <option value="h2so4">硫酸 (H₂SO₄)</option>
+                                    <option value="hno3">硝酸 (HNO₃)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="text-sm font-medium text-gray-700 mb-2 block">
+                                    浓度 (mol/L)
+                                </label>
+                                <input type="range" min="0.1" max="2" step="0.1" value="1" 
+                                       class="w-full h-2 bg-blue-200 rounded-lg appearance-none cursor-pointer">
+                                <div class="flex justify-between text-xs text-gray-500 mt-1">
+                                    <span>0.1M</span>
+                                    <span>1.0M</span>
+                                    <span>2.0M</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 试剂B参数 -->
+                    <div class="bg-purple-50 rounded-xl p-4">
+                        <h3 class="text-sm font-medium text-purple-800 mb-3">试剂B</h3>
+                        <div class="space-y-3">
+                            <div>
+                                <label class="text-sm font-medium text-gray-700 mb-2 block">
+                                    试剂B
+                                </label>
+                                <select class="w-full px-3 py-2 bg-white border border-gray-300 rounded-lg text-sm text-gray-700">
+                                    <option value="naoh">氢氧化钠 (NaOH)</option>
+                                    <option value="koh">氢氧化钾 (KOH)</option>
+                                    <option value="nh3h2o">氨水 (NH₃·H₂O)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="text-sm font-medium text-gray-700 mb-2 block">
+                                    浓度 (mol/L)
+                                </label>
+                                <input type="range" min="0.1" max="2" step="0.1" value="1" 
+                                       class="w-full h-2 bg-purple-200 rounded-lg appearance-none cursor-pointer">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 实验条件 -->
+                    <div class="bg-green-50 rounded-xl p-4">
+                        <h3 class="text-sm font-medium text-green-800 mb-3">实验条件</h3>
+                        <div class="space-y-3">
+                            <div>
+                                <label class="text-sm font-medium text-gray-700 mb-2 block">
+                                    温度 (°C)
+                                </label>
+                                <input type="range" min="15" max="40" step="1" value="25" 
+                                       class="w-full h-2 bg-green-200 rounded-lg appearance-none cursor-pointer">
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <label class="text-sm text-gray-700">添加指示剂</label>
+                                <div class="relative inline-block w-10 mr-2 align-middle select-none">
+                                    <input type="checkbox" checked 
+                                           class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer"/>
+                                    <label class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 测量结果 -->
+            <section class="bg-white rounded-2xl p-4 shadow-sm mb-6">
+                <h2 class="text-lg font-medium text-gray-800 mb-3">实验数据</h2>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-gray-50 rounded-xl p-3">
+                        <div class="text-sm text-gray-600 mb-1">pH值</div>
+                        <div class="text-lg font-medium text-blue-500">7.0</div>
+                    </div>
+                    <div class="bg-gray-50 rounded-xl p-3">
+                        <div class="text-sm text-gray-600 mb-1">反应热</div>
+                        <div class="text-lg font-medium text-green-500">-57.1 kJ/mol</div>
+                    </div>
+                    <div class="bg-gray-50 rounded-xl p-3">
+                        <div class="text-sm text-gray-600 mb-1">反应速率</div>
+                        <div class="text-lg font-medium text-purple-500">快速</div>
+                    </div>
+                    <div class="bg-gray-50 rounded-xl p-3">
+                        <div class="text-sm text-gray-600 mb-1">产物</div>
+                        <div class="text-lg font-medium text-orange-500">NaCl + H₂O</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 反应方程式 -->
+            <section class="bg-white rounded-2xl p-4 shadow-sm mb-6">
+                <h2 class="text-lg font-medium text-gray-800 mb-3">反应方程式</h2>
+                <div class="p-3 bg-gray-50 rounded-xl">
+                    <div class="text-center text-lg">
+                        HCl + NaOH ⟶ NaCl + H₂O
+                    </div>
+                </div>
+                <div class="mt-3 text-sm text-gray-600">
+                    <p>类型: <span class="text-blue-600">酸碱中和反应</span></p>
+                    <p class="mt-1">特点: 生成盐和水，pH值趋近中性</p>
+                </div>
+            </section>
+
+            <!-- 微观视图 -->
+            <section class="bg-white rounded-2xl p-4 shadow-sm mb-6">
+                <h2 class="text-lg font-medium text-gray-800 mb-3">微观视图</h2>
+                <div class="aspect-video bg-gray-100 rounded-xl">
+                    <!-- 分子模型显示区域 -->
+                </div>
+                <div class="mt-2 flex justify-end">
+                    <button class="text-sm text-blue-500">
+                        <i class="fas fa-sync-alt mr-1"></i>
+                        切换模型视图
+                    </button>
+                </div>
+            </section>
+
+            <!-- 思考题 -->
+            <section class="bg-white rounded-2xl p-4 shadow-sm">
+                <h2 class="text-lg font-medium text-gray-800 mb-3">思考问题</h2>
+                <div class="space-y-3">
+                    <div class="p-3 bg-yellow-50 rounded-xl">
+                        <p class="text-sm text-gray-700">1. 不同浓度的酸碱溶液中和时，pH变化曲线有何特点？</p>
+                    </div>
+                    <div class="p-3 bg-yellow-50 rounded-xl">
+                        <p class="text-sm text-gray-700">2. 为什么需要使用指示剂？不同指示剂的变色点有何区别？</p>
+                    </div>
+                    <div class="p-3 bg-yellow-50 rounded-xl">
+                        <p class="text-sm text-gray-700">3. 实际滴定中，如何准确判断终点？</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- 实验控制按钮 -->
+        <div class="fixed bottom-24 left-4 right-4 max-w-[393px] mx-auto z-10">
+            <div class="flex space-x-4">
+                <button class="flex-1 bg-blue-500 text-white py-3 rounded-2xl font-medium shadow-lg">
+                    开始反应
+                </button>
+                <button class="flex-1 bg-gray-200 text-gray-700 py-3 rounded-2xl font-medium">
+                    重置
+                </button>
+            </div>
+        </div>
+
+        <!-- 底部导航栏 -->
+        <footer class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 rounded-t-3xl safe-area-bottom">
+            <div class="mx-auto max-w-[393px]">
+                <nav class="flex justify-around items-center px-8 py-4">
+                    <a href="index.html" class="flex flex-col items-center min-w-[64px]">
+                        <i class="fas fa-home text-gray-400 text-xl mb-1"></i>
+                        <span class="text-xs text-gray-500">首页</span>
+                    </a>
+                    <a href="explore.html" class="flex flex-col items-center min-w-[64px]">
+                        <i class="fas fa-compass text-gray-400 text-xl mb-1"></i>
+                        <span class="text-xs text-gray-500">探索</span>
+                    </a>
+                    <a href="favorites.html" class="flex flex-col items-center min-w-[64px]">
+                        <i class="far fa-bookmark text-gray-400 text-xl mb-1"></i>
+                        <span class="text-xs text-gray-500">收藏</span>
+                    </a>
+                    <a href="profile.html" class="flex flex-col items-center min-w-[64px]">
+                        <i class="far fa-user text-gray-400 text-xl mb-1"></i>
+                        <span class="text-xs text-gray-500">我的</span>
+                    </a>
+                </nav>
+            </div>
+        </footer>
+    </div>
+</body>
+</html> 

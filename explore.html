@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>探索 - 学科可视化教学平台</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <div class="app-container mx-auto min-h-screen relative max-w-[393px]">
+        <!-- 顶部导航栏 -->
+        <header class="bg-white shadow-sm sticky top-0 z-10">
+            <div class="px-4 py-4 flex items-center">
+                <h1 class="text-xl font-bold text-gray-800">探索</h1>
+                <div class="ml-auto">
+                    <button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100">
+                        <i class="fas fa-search text-gray-500"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- 主内容区 -->
+        <main class="px-4 py-4 pb-28">
+            <!-- 学科分类 -->
+            <section class="mb-6">
+                <h2 class="text-lg font-bold text-gray-800 mb-4">学科分类</h2>
+                <div class="grid grid-cols-2 gap-4">
+                    <a href="physics-catalog.html" class="block">
+                        <div class="bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition-all">
+                            <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-3">
+                                <i class="fas fa-atom text-blue-500 text-xl"></i>
+                            </div>
+                            <h3 class="text-base font-medium text-gray-800 mb-1">物理</h3>
+                            <p class="text-sm text-gray-500">力学、电磁学、光学</p>
+                        </div>
+                    </a>
+
+                    <a href="chemistry-catalog.html" class="block">
+                        <div class="bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition-all">
+                            <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-3">
+                                <i class="fas fa-flask text-green-500 text-xl"></i>
+                            </div>
+                            <h3 class="text-base font-medium text-gray-800 mb-1">化学</h3>
+                            <p class="text-sm text-gray-500">化学反应、物质结构</p>
+                        </div>
+                    </a>
+
+                    <a href="biology-catalog.html" class="block">
+                        <div class="bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition-all">
+                            <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-3">
+                                <i class="fas fa-dna text-purple-500 text-xl"></i>
+                            </div>
+                            <h3 class="text-base font-medium text-gray-800 mb-1">生物</h3>
+                            <p class="text-sm text-gray-500">细胞学、生理学、生态</p>
+                        </div>
+                    </a>
+
+                    <a href="earth-science-catalog.html" class="block">
+                        <div class="bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition-all">
+                            <div class="w-12 h-12 bg-teal-100 rounded-xl flex items-center justify-center mb-3">
+                                <i class="fas fa-globe-americas text-teal-500 text-xl"></i>
+                            </div>
+                            <h3 class="text-base font-medium text-gray-800 mb-1">地球科学</h3>
+                            <p class="text-sm text-gray-500">地质学、气象学</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <!-- 热门实验 -->
+            <section class="mb-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-lg font-bold text-gray-800">热门实验</h2>
+                    <a href="popular.html" class="text-sm text-blue-500">查看全部</a>
+                </div>
+                
+                <div class="space-y-3">
+                    <!-- 实验卡片 -->
+                    <a href="newton-second-law.html" class="block">
+                        <div class="bg-white p-3 rounded-xl shadow-sm flex items-center">
+                            <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-arrows-alt text-blue-500 text-2xl"></i>
+                            </div>
+                            <div class="ml-3 flex-1">
+                                <h3 class="text-base font-medium text-gray-800">牛顿第二定律</h3>
+                                <p class="text-xs text-gray-500 mt-1">探索力、质量与加速度的关系</p>
+                            </div>
+                            <div class="text-xs px-2 py-1 bg-blue-100 text-blue-700 rounded-lg">
+                                物理
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="pendulum.html" class="block">
+                        <div class="bg-white p-3 rounded-xl shadow-sm flex items-center">
+                            <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-exchange-alt text-blue-500 text-2xl"></i>
+                            </div>
+                            <div class="ml-3 flex-1">
+                                <h3 class="text-base font-medium text-gray-800">单摆实验</h3>
+                                <p class="text-xs text-gray-500 mt-1">研究单摆周期与摆长的关系</p>
+                            </div>
+                            <div class="text-xs px-2 py-1 bg-blue-100 text-blue-700 rounded-lg">
+                                物理
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <!-- 最近更新部分 -->
+            <section class="mb-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-lg font-bold text-gray-800">最近更新</h2>
+                    <a href="#" class="text-sm text-blue-500">查看全部</a>
+                </div>
+                
+                <div class="bg-blue-50 rounded-xl p-4">
+                    <h3 class="text-base font-medium text-blue-800 mb-3">更新公告</h3>
+                    <div class="space-y-3">
+                        <div class="bg-white rounded-lg p-3">
+                            <div class="flex items-start">
+                                <i class="fas fa-star text-yellow-500 mt-0.5 mr-2"></i>
+                                <div>
+                                    <h4 class="text-sm font-medium text-gray-800">新增牛顿摆实验</h4>
+                                    <p class="text-xs text-gray-600">
+                                        直观演示动量守恒与能量传递，支持多种碰撞模式对比。
+                                    </p>
+                                    <div class="flex items-center mt-2">
+                                        <span class="text-xs text-gray-500">2024-01-15</span>
+                                        <span class="mx-2 text-gray-300">|</span>
+                                        <a href="newton-cradle.html" class="text-xs text-blue-500">立即体验</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-lg p-3">
+                            <div class="flex items-start">
+                                <i class="fas fa-tools text-gray-500 mt-0.5 mr-2"></i>
+                                <div>
+                                    <h4 class="text-sm font-medium text-gray-800">改进实验参数精度</h4>
+                                    <p class="text-xs text-gray-600">
+                                        所有实验现在支持更精细的参数调整，增强实验准确性。
+                                    </p>
+                                    <div class="flex items-center mt-2">
+                                        <span class="text-xs text-gray-500">2024-01-10</span>
+                                        <span class="mx-2 text-gray-300">|</span>
+                                        <a href="#" class="text-xs text-blue-500">查看详情</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-lg p-3">
+                            <div class="flex items-start">
+                                <i class="fas fa-plus-circle text-green-500 mt-0.5 mr-2"></i>
+                                <div>
+                                    <h4 class="text-sm font-medium text-gray-800">增加数据导出功能</h4>
+                                    <p class="text-xs text-gray-600">
+                                        现在可以将实验数据导出为CSV格式，方便进一步分析。
+                                    </p>
+                                    <div class="flex items-center mt-2">
+                                        <span class="text-xs text-gray-500">2024-01-05</span>
+                                        <span class="mx-2 text-gray-300">|</span>
+                                        <a href="#" class="text-xs text-blue-500">了解更多</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 学习建议 -->
+            <section class="mb-6">
+                <h2 class="text-lg font-bold text-gray-800 mb-4">学习建议</h2>
+                <div class="bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl p-4 text-white">
+                    <div class="flex items-start">
+                        <div class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+                            <i class="fas fa-lightbulb text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-medium mb-2">从基础实验开始</h3>
+                            <p class="text-sm text-blue-100">
+                                建议先完成基础力学实验，掌握基本概念后再尝试更复杂的实验。
+                            </p>
+                            <a href="learning-path.html" class="mt-3 inline-block bg-white text-blue-500 px-4 py-2 rounded-lg text-sm font-medium">
+                                查看学习路径
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- 底部导航栏 -->
+        <footer class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 rounded-t-3xl safe-area-bottom">
+            <div class="mx-auto max-w-[393px]">
+                <nav class="flex justify-around items-center px-8 py-4">
+                    <a href="index.html" class="flex flex-col items-center min-w-[64px]">
+                        <i class="fas fa-home text-gray-400 text-xl mb-1"></i>
+                        <span class="text-xs text-gray-500">首页</span>
+                    </a>
+                    <a href="explore.html" class="flex flex-col items-center min-w-[64px]">
+                        <i class="fas fa-compass text-blue-500 text-xl mb-1"></i>
+                        <span class="text-xs text-blue-500">探索</span>
+                    </a>
+                    <a href="favorites.html" class="flex flex-col items-center min-w-[64px]">
+                        <i class="far fa-bookmark text-gray-400 text-xl mb-1"></i>
+                        <span class="text-xs text-gray-500">收藏</span>
+                    </a>
+                    <a href="profile.html" class="flex flex-col items-center min-w-[64px]">
+                        <i class="far fa-user text-gray-400 text-xl mb-1"></i>
+                        <span class="text-xs text-gray-500">我的</span>
+                    </a>
+                </nav>
+            </div>
+        </footer>
+    </div>
+</body>
+</html> 

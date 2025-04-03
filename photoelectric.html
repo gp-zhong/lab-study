@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>光电效应 - 学科可视化教学平台</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0 auto;
+            min-height: 100vh;
+            background: #F3F4F6;
+        }
+        .safe-area-bottom {
+            padding-bottom: env(safe-area-inset-bottom);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+    <div class="app-container mx-auto bg-gray-50 min-h-screen relative max-w-[393px]">
+        <!-- 顶部导航栏 -->
+        <header class="bg-white shadow-sm sticky top-0 z-10 rounded-b-xl">
+            <div class="header-safe-area px-4 py-3">
+                <div class="flex items-center">
+                    <a href="optics.html" class="mr-4">
+                        <i class="fas fa-arrow-left text-gray-600"></i>
+                    </a>
+                    <h1 class="text-xl font-bold text-gray-800">光电效应</h1>
+                </div>
+            </div>
+        </header>
+
+        <!-- 主内容区 -->
+        <main class="px-4 py-4 pb-28 space-y-6">
+            <!-- 实验模型选择 -->
+            <section class="bg-white rounded-xl p-6 shadow-sm">
+                <h2 class="text-lg font-bold text-gray-800 mb-4">选择实验模型</h2>
+                <div class="grid grid-cols-2 gap-4">
+                    <button class="bg-yellow-50 rounded-xl p-4 text-center hover:bg-yellow-100 transition-all group">
+                        <div class="w-12 h-12 bg-yellow-100 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:bg-yellow-200">
+                            <i class="fas fa-sun text-yellow-500 text-xl"></i>
+                        </div>
+                        <span class="text-sm font-medium text-gray-800">基本光电效应</span>
+                    </button>
+                    
+                    <button class="bg-blue-50 rounded-xl p-4 text-center hover:bg-blue-100 transition-all group">
+                        <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:bg-blue-200">
+                            <i class="fas fa-bolt text-blue-500 text-xl"></i>
+                        </div>
+                        <span class="text-sm font-medium text-gray-800">截止电压测定</span>
+                    </button>
+                    
+                    <button class="bg-green-50 rounded-xl p-4 text-center hover:bg-green-100 transition-all group">
+                        <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:bg-green-200">
+                            <i class="fas fa-chart-line text-green-500 text-xl"></i>
+                        </div>
+                        <span class="text-sm font-medium text-gray-800">普朗克常数</span>
+                    </button>
+                    
+                    <button class="bg-purple-50 rounded-xl p-4 text-center hover:bg-purple-100 transition-all group">
+                        <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:bg-purple-200">
+                            <i class="fas fa-atom text-purple-500 text-xl"></i>
+                        </div>
+                        <span class="text-sm font-medium text-gray-800">光量子性质</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- 基本原理 -->
+            <section class="bg-white rounded-xl p-6 shadow-sm">
+                <h2 class="text-lg font-bold text-gray-800 mb-4">基本原理</h2>
+                <div class="space-y-4">
+                    <div class="bg-gray-50 rounded-xl p-4">
+                        <h3 class="text-base font-medium text-gray-800 mb-2">爱因斯坦光电方程</h3>
+                        <p class="text-sm text-gray-600">
+                            光子能量与电子动能的关系，揭示了光的量子性。
+                        </p>
+                        <div class="mt-2 p-2 bg-blue-50 rounded-lg text-center">
+                            <span class="font-mono text-blue-600">hν = Φ + (1/2)mv²</span>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 rounded-xl p-4">
+                        <h3 class="text-base font-medium text-gray-800 mb-2">光电效应三定律</h3>
+                        <ul class="text-sm text-gray-600 space-y-2 list-disc pl-4">
+                            <li>光电流与光强成正比</li>
+                            <li>光电子动能与频率有关</li>
+                            <li>存在截止频率</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 应用场景 -->
+            <section class="bg-white rounded-xl p-6 shadow-sm">
+                <h2 class="text-lg font-bold text-gray-800 mb-4">应用场景</h2>
+                <div class="space-y-3">
+                    <div class="flex items-start">
+                        <div class="w-10 h-10 bg-yellow-100 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+                            <i class="fas fa-solar-panel text-yellow-500"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-base font-medium text-gray-800 mb-1">太阳能电池</h3>
+                            <p class="text-sm text-gray-600">
+                                将光能直接转换为电能的光电器件。
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+                            <i class="fas fa-camera text-blue-500"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-base font-medium text-gray-800 mb-1">光电传感器</h3>
+                            <p class="text-sm text-gray-600">
+                                自动门、安防系统中的光电探测装置。
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+                            <i class="fas fa-tv text-green-500"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-base font-medium text-gray-800 mb-1">光电显示</h3>
+                            <p class="text-sm text-gray-600">
+                                LED显示屏、光电转换设备。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 实验要求 -->
+            <section class="bg-white rounded-xl p-6 shadow-sm mb-24">
+                <h2 class="text-lg font-bold text-gray-800 mb-4">实验要求</h2>
+                <div class="space-y-3">
+                    <div class="flex items-center text-sm text-gray-600">
+                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                        <span>测量不同频率光照下的光电流</span>
+                    </div>
+                    <div class="flex items-center text-sm text-gray-600">
+                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                        <span>确定截止电压</span>
+                    </div>
+                    <div class="flex items-center text-sm text-gray-600">
+                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                        <span>验证光电效应定律</span>
+                    </div>
+                    <div class="flex items-center text-sm text-gray-600">
+                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                        <span>计算普朗克常数</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 开始实验按钮 -->
+            <div class="fixed bottom-24 left-4 right-4 max-w-[393px] mx-auto z-10">
+                <a href="photoelectric-experiment.html" class="block bg-blue-500 text-white text-center py-4 rounded-xl font-medium shadow-lg hover:bg-blue-600 transition-all">
+                    开始实验
+                </a>
+            </div>
+        </main>
+
+        <!-- 底部导航栏 -->
+        <footer class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 rounded-t-3xl max-w-[393px] mx-auto z-20">
+            <div class="footer-safe-area safe-area-bottom">
+                <nav class="flex justify-around items-center px-6 py-4">
+                    <a href="index.html" class="flex flex-col items-center min-w-[64px]">
+                        <i class="fas fa-home text-gray-400 text-xl mb-1"></i>
+                        <span class="text-xs text-gray-500">首页</span>
+                    </a>
+                    <a href="explore.html" class="flex flex-col items-center min-w-[64px]">
+                        <i class="fas fa-compass text-blue-500 text-xl mb-1"></i>
+                        <span class="text-xs text-blue-500">探索</span>
+                    </a>
+                    <a href="favorites.html" class="flex flex-col items-center min-w-[64px]">
+                        <i class="far fa-bookmark text-gray-400 text-xl mb-1"></i>
+                        <span class="text-xs text-gray-500">收藏</span>
+                    </a>
+                    <a href="profile.html" class="flex flex-col items-center min-w-[64px]">
+                        <i class="far fa-user text-gray-400 text-xl mb-1"></i>
+                        <span class="text-xs text-gray-500">我的</span>
+                    </a>
+                </nav>
+            </div>
+        </footer>
+    </div>
+</body>
+</html> 

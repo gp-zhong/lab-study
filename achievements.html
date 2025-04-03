@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>成就徽章 - 学科可视化教学平台</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0 auto;
+            min-height: 100vh;
+            background: #F3F4F6;
+        }
+        .safe-area-bottom {
+            padding-bottom: env(safe-area-inset-bottom);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+    <div class="app-container mx-auto bg-gray-50 min-h-screen relative max-w-[393px]">
+        <!-- 顶部导航栏 -->
+        <header class="bg-white shadow-sm sticky top-0 z-10 rounded-b-xl">
+            <div class="px-4 py-4 flex items-center">
+                <a href="profile.html" class="mr-4">
+                    <i class="fas fa-arrow-left text-gray-600"></i>
+                </a>
+                <h1 class="text-xl font-bold text-gray-800">成就徽章</h1>
+            </div>
+        </header>
+
+        <main class="px-4 py-4 pb-28">
+            <!-- 徽章统计 -->
+            <section class="bg-white rounded-xl shadow-sm p-4 mb-6">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h2 class="text-lg font-bold text-gray-800">我的徽章</h2>
+                        <p class="text-sm text-gray-500 mt-1">1/24 已获得</p>
+                    </div>
+                    <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center">
+                        <i class="fas fa-medal text-white text-xl"></i>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 学科入门徽章 -->
+            <section class="bg-white rounded-xl overflow-hidden shadow-sm mb-6">
+                <div class="p-3 bg-blue-50 border-b border-blue-100">
+                    <h3 class="font-medium text-blue-800">学科入门徽章</h3>
+                </div>
+                <div class="p-4 grid grid-cols-3 gap-4">
+                    <div class="p-2 flex flex-col items-center">
+                        <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center">
+                            <i class="fas fa-atom text-white text-2xl"></i>
+                        </div>
+                        <p class="text-xs text-center mt-2 text-blue-600">物理新手</p>
+                        <span class="text-xs text-green-500 mt-1">已获得</span>
+                    </div>
+                    <div class="p-2 flex flex-col items-center">
+                        <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center">
+                            <i class="fas fa-flask text-gray-400 text-2xl"></i>
+                        </div>
+                        <p class="text-xs text-center mt-2 text-gray-400">化学新手</p>
+                        <span class="text-xs text-gray-400 mt-1">未解锁</span>
+                    </div>
+                    <div class="p-2 flex flex-col items-center">
+                        <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center">
+                            <i class="fas fa-dna text-gray-400 text-2xl"></i>
+                        </div>
+                        <p class="text-xs text-center mt-2 text-gray-400">生物新手</p>
+                        <span class="text-xs text-gray-400 mt-1">未解锁</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 物理学科徽章 -->
+            <section class="bg-white rounded-xl overflow-hidden shadow-sm mb-6">
+                <div class="p-3 bg-blue-50 border-b border-blue-100">
+                    <h3 class="font-medium text-blue-800">物理学科徽章</h3>
+                </div>
+                <div class="p-4 grid grid-cols-3 gap-4">
+                    <div class="p-2 flex flex-col items-center">
+                        <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center">
+                            <i class="fas fa-atom text-white text-2xl"></i>
+                        </div>
+                        <p class="text-xs text-center mt-2 text-blue-600">物理新手</p>
+                        <span class="text-xs text-green-500 mt-1">已获得</span>
+                    </div>
+                    <div class="p-2 flex flex-col items-center">
+                        <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center">
+                            <i class="fas fa-arrows-alt text-gray-400 text-2xl"></i>
+                        </div>
+                        <p class="text-xs text-center mt-2 text-gray-400">力学大师</p>
+                        <span class="text-xs text-gray-400 mt-1">未解锁</span>
+                    </div>
+                    <div class="p-2 flex flex-col items-center">
+                        <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center">
+                            <i class="fas fa-bolt text-gray-400 text-2xl"></i>
+                        </div>
+                        <p class="text-xs text-center mt-2 text-gray-400">电学专家</p>
+                        <span class="text-xs text-gray-400 mt-1">未解锁</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 化学学科徽章 -->
+            <section class="bg-white rounded-xl overflow-hidden shadow-sm mb-6">
+                <div class="p-3 bg-green-50 border-b border-green-100">
+                    <h3 class="font-medium text-green-800">化学学科徽章</h3>
+                </div>
+                <div class="p-4 grid grid-cols-3 gap-4">
+                    <div class="p-2 flex flex-col items-center">
+                        <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center">
+                            <i class="fas fa-flask text-gray-400 text-2xl"></i>
+                        </div>
+                        <p class="text-xs text-center mt-2 text-gray-400">化学新手</p>
+                        <span class="text-xs text-gray-400 mt-1">未解锁</span>
+                    </div>
+                    <div class="p-2 flex flex-col items-center">
+                        <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center">
+                            <i class="fas fa-vial text-gray-400 text-2xl"></i>
+                        </div>
+                        <p class="text-xs text-center mt-2 text-gray-400">反应高手</p>
+                        <span class="text-xs text-gray-400 mt-1">未解锁</span>
+                    </div>
+                    <div class="p-2 flex flex-col items-center">
+                        <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center">
+                            <i class="fas fa-atom text-gray-400 text-2xl"></i>
+                        </div>
+                        <p class="text-xs text-center mt-2 text-gray-400">元素收集者</p>
+                        <span class="text-xs text-gray-400 mt-1">未解锁</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 特殊成就徽章 -->
+            <section class="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-xl p-4 mb-6 text-white">
+                <h3 class="font-bold mb-3">特殊成就徽章</h3>
+                <div class="grid grid-cols-3 gap-2">
+                    <div class="p-2 flex flex-col items-center">
+                        <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+                            <i class="fas fa-medal text-white text-2xl"></i>
+                        </div>
+                        <p class="text-xs text-center mt-2 text-white">全科精通</p>
+                    </div>
+                    <div class="p-2 flex flex-col items-center">
+                        <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+                            <i class="fas fa-trophy text-white text-2xl"></i>
+                        </div>
+                        <p class="text-xs text-center mt-2 text-white">实验王者</p>
+                    </div>
+                    <div class="p-2 flex flex-col items-center">
+                        <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+                            <i class="fas fa-crown text-white text-2xl"></i>
+                        </div>
+                        <p class="text-xs text-center mt-2 text-white">探索先锋</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 生物学徽章 -->
+            <section class="bg-white rounded-xl overflow-hidden shadow-sm mb-6">
+                <div class="p-3 bg-purple-50 border-b border-purple-100">
+                    <h3 class="font-medium text-purple-800">生物学徽章</h3>
+                </div>
+                <div class="p-4 grid grid-cols-3 gap-4">
+                    <div class="p-2 flex flex-col items-center">
+                        <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center">
+                            <i class="fas fa-dna text-gray-400 text-2xl"></i>
+                        </div>
+                        <p class="text-xs text-center mt-2 text-gray-400">生物新手</p>
+                        <span class="text-xs text-gray-400 mt-1">未解锁</span>
+                    </div>
+                    <div class="p-2 flex flex-col items-center">
+                        <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center">
+                            <i class="fas fa-leaf text-gray-400 text-2xl"></i>
+                        </div>
+                        <p class="text-xs text-center mt-2 text-gray-400">细胞学家</p>
+                        <span class="text-xs text-gray-400 mt-1">未解锁</span>
+                    </div>
+                    <div class="p-2 flex flex-col items-center">
+                        <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center">
+                            <i class="fas fa-heartbeat text-gray-400 text-2xl"></i>
+                        </div>
+                        <p class="text-xs text-center mt-2 text-gray-400">生理专家</p>
+                        <span class="text-xs text-gray-400 mt-1">未解锁</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 学习习惯徽章 -->
+            <section class="bg-white rounded-xl overflow-hidden shadow-sm mb-6">
+                <div class="p-3 bg-yellow-50 border-b border-yellow-100">
+                    <h3 class="font-medium text-yellow-800">学习习惯徽章</h3>
+                </div>
+                <div class="p-4 grid grid-cols-3 gap-4">
+                    <div class="p-2 flex flex-col items-center">
+                        <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center">
+                            <i class="fas fa-calendar-check text-gray-400 text-2xl"></i>
+                        </div>
+                        <p class="text-xs text-center mt-2 text-gray-400">连续学习7天</p>
+                        <span class="text-xs text-gray-400 mt-1">未解锁</span>
+                    </div>
+                    <div class="p-2 flex flex-col items-center">
+                        <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center">
+                            <i class="fas fa-stopwatch text-gray-400 text-2xl"></i>
+                        </div>
+                        <p class="text-xs text-center mt-2 text-gray-400">专注学习</p>
+                        <span class="text-xs text-gray-400 mt-1">未解锁</span>
+                    </div>
+                    <div class="p-2 flex flex-col items-center">
+                        <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center">
+                            <i class="fas fa-book-reader text-gray-400 text-2xl"></i>
+                        </div>
+                        <p class="text-xs text-center mt-2 text-gray-400">博学多才</p>
+                        <span class="text-xs text-gray-400 mt-1">未解锁</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 如何获得更多徽章 -->
+            <section class="bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl p-4 text-white mb-6">
+                <h2 class="text-lg font-bold mb-3">如何获得更多徽章？</h2>
+                <div class="space-y-3">
+                    <div class="flex items-start">
+                        <i class="fas fa-check-circle mt-1 mr-3"></i>
+                        <p class="text-sm">完成学科实验并通过相关的测验</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-check-circle mt-1 mr-3"></i>
+                        <p class="text-sm">保持每日学习习惯，连续登录平台</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-check-circle mt-1 mr-3"></i>
+                        <p class="text-sm">尝试跨学科的综合实验</p>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-check-circle mt-1 mr-3"></i>
+                        <p class="text-sm">参与社区讨论，分享自己的实验发现</p>
+                    </div>
+                </div>
+                <button class="w-full mt-4 py-2 bg-white text-blue-600 rounded-lg text-sm font-medium">
+                    查看全部徽章获取条件
+                </button>
+            </section>
+        </main>
+
+        <!-- 底部导航栏 -->
+        <footer class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 rounded-t-3xl max-w-[393px] mx-auto z-20">
+            <div class="footer-safe-area safe-area-bottom">
+                <nav class="flex justify-around items-center px-6 py-4">
+                    <a href="index.html" class="flex flex-col items-center min-w-[64px]">
+                        <i class="fas fa-home text-gray-400 text-xl mb-1"></i>
+                        <span class="text-xs text-gray-500">首页</span>
+                    </a>
+                    <a href="explore.html" class="flex flex-col items-center min-w-[64px]">
+                        <i class="fas fa-compass text-gray-400 text-xl mb-1"></i>
+                        <span class="text-xs text-gray-500">探索</span>
+                    </a>
+                    <a href="favorites.html" class="flex flex-col items-center min-w-[64px]">
+                        <i class="far fa-bookmark text-gray-400 text-xl mb-1"></i>
+                        <span class="text-xs text-gray-500">收藏</span>
+                    </a>
+                    <a href="profile.html" class="flex flex-col items-center min-w-[64px]">
+                        <i class="far fa-user text-blue-500 text-xl mb-1"></i>
+                        <span class="text-xs text-blue-500">我的</span>
+                    </a>
+                </nav>
+            </div>
+        </footer>
+    </div>
+</body>
+</html> 

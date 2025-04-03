@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>声波与共振 - 学科可视化教学平台</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0 auto;
+            min-height: 100vh;
+            background: #F3F4F6;
+        }
+        .safe-area-bottom {
+            padding-bottom: env(safe-area-inset-bottom);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+    <div class="app-container mx-auto bg-gray-50 min-h-screen relative max-w-[393px]">
+        <!-- 顶部导航栏 -->
+        <header class="bg-white shadow-sm sticky top-0 z-10 rounded-b-xl">
+            <div class="header-safe-area px-4 py-3">
+                <div class="flex items-center">
+                    <a href="explore.html" class="mr-4">
+                        <i class="fas fa-arrow-left text-gray-600"></i>
+                    </a>
+                    <h1 class="text-xl font-bold text-gray-800">声波与共振</h1>
+                </div>
+            </div>
+        </header>
+
+        <!-- 主内容区 -->
+        <main class="px-4 py-4 pb-28">
+            <!-- 实验模型选择 -->
+            <section class="bg-white rounded-xl p-6 shadow-sm mb-6">
+                <h2 class="text-lg font-bold text-gray-800 mb-4">选择实验模型</h2>
+                <div class="grid grid-cols-2 gap-4">
+                    <button class="bg-blue-50 rounded-xl p-4 text-center hover:bg-blue-100 transition-all group">
+                        <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:bg-blue-200">
+                            <i class="fas fa-wave-square text-blue-500 text-xl"></i>
+                        </div>
+                        <span class="text-sm font-medium text-gray-800">弦振动</span>
+                    </button>
+                    
+                    <button class="bg-green-50 rounded-xl p-4 text-center hover:bg-green-100 transition-all group">
+                        <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:bg-green-200">
+                            <i class="fas fa-music text-green-500 text-xl"></i>
+                        </div>
+                        <span class="text-sm font-medium text-gray-800">音叉共振</span>
+                    </button>
+                    
+                    <button class="bg-yellow-50 rounded-xl p-4 text-center hover:bg-yellow-100 transition-all group">
+                        <div class="w-12 h-12 bg-yellow-100 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:bg-yellow-200">
+                            <i class="fas fa-volume-up text-yellow-500 text-xl"></i>
+                        </div>
+                        <span class="text-sm font-medium text-gray-800">共振管</span>
+                    </button>
+                    
+                    <button class="bg-purple-50 rounded-xl p-4 text-center hover:bg-purple-100 transition-all group">
+                        <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:bg-purple-200">
+                            <i class="fas fa-car text-purple-500 text-xl"></i>
+                        </div>
+                        <span class="text-sm font-medium text-gray-800">多普勒效应</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- 基本原理 -->
+            <section class="bg-white rounded-xl p-6 shadow-sm mb-6">
+                <h2 class="text-lg font-bold text-gray-800 mb-4">基本原理</h2>
+                <div class="space-y-4">
+                    <div class="bg-gray-50 rounded-xl p-4">
+                        <h3 class="text-base font-medium text-gray-800 mb-2">波动方程</h3>
+                        <p class="text-sm text-gray-600">
+                            声波是一种机械波，其传播遵循波动方程。在弦振动中，波的传播速度与弦的张力和线密度有关。
+                        </p>
+                    </div>
+                    <div class="bg-gray-50 rounded-xl p-4">
+                        <h3 class="text-base font-medium text-gray-800 mb-2">共振现象</h3>
+                        <p class="text-sm text-gray-600">
+                            当外界振动频率接近系统固有频率时，系统会产生共振，振幅显著增大。
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 应用场景 -->
+            <section class="bg-white rounded-xl p-6 shadow-sm mb-6">
+                <h2 class="text-lg font-bold text-gray-800 mb-4">应用场景</h2>
+                <div class="space-y-3">
+                    <div class="flex items-start">
+                        <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+                            <i class="fas fa-guitar text-blue-500"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-base font-medium text-gray-800 mb-1">乐器设计</h3>
+                            <p class="text-sm text-gray-600">
+                                弦乐器和管乐器的音高设计都基于声波原理。
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+                            <i class="fas fa-building text-green-500"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-base font-medium text-gray-800 mb-1">建筑声学</h3>
+                            <p class="text-sm text-gray-600">
+                                音乐厅和剧院的声学设计需要考虑声波反射和共振。
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="w-10 h-10 bg-yellow-100 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+                            <i class="fas fa-heartbeat text-yellow-500"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-base font-medium text-gray-800 mb-1">医疗技术</h3>
+                            <p class="text-sm text-gray-600">
+                                超声波检查和治疗利用声波的特性。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 关键概念 -->
+            <section class="bg-white rounded-xl p-6 shadow-sm mb-6">
+                <h2 class="text-lg font-bold text-gray-800 mb-4">关键概念</h2>
+                <div class="grid grid-cols-2 gap-3">
+                    <div class="bg-gray-50 rounded-xl p-3">
+                        <h3 class="text-sm font-medium text-gray-800 mb-1">固有频率</h3>
+                        <p class="text-xs text-gray-600">系统自然振动的频率</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-xl p-3">
+                        <h3 class="text-sm font-medium text-gray-800 mb-1">驻波</h3>
+                        <p class="text-xs text-gray-600">波的叠加形成的稳定波形</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-xl p-3">
+                        <h3 class="text-sm font-medium text-gray-800 mb-1">强迫振动</h3>
+                        <p class="text-xs text-gray-600">外力作用下的振动</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-xl p-3">
+                        <h3 class="text-sm font-medium text-gray-800 mb-1">共振条件</h3>
+                        <p class="text-xs text-gray-600">激励频率等于固有频率</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- 开始实验按钮 -->
+        <div class="fixed bottom-24 left-4 right-4 max-w-[393px] mx-auto z-10">
+            <a href="sound-experiment.html" class="block bg-blue-500 text-white text-center py-4 rounded-xl font-medium shadow-lg hover:bg-blue-600 transition-all">
+                开始实验
+            </a>
+        </div>
+
+        <!-- 底部导航栏 -->
+        <footer class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 rounded-t-3xl max-w-[393px] mx-auto z-20">
+            <div class="footer-safe-area safe-area-bottom">
+                <nav class="flex justify-around items-center px-6 py-4">
+                    <a href="index.html" class="flex flex-col items-center min-w-[64px]">
+                        <i class="fas fa-home text-gray-400 text-xl mb-1"></i>
+                        <span class="text-xs text-gray-500">首页</span>
+                    </a>
+                    <a href="explore.html" class="flex flex-col items-center min-w-[64px]">
+                        <i class="fas fa-compass text-blue-500 text-xl mb-1"></i>
+                        <span class="text-xs text-blue-500">探索</span>
+                    </a>
+                    <a href="favorites.html" class="flex flex-col items-center min-w-[64px]">
+                        <i class="far fa-bookmark text-gray-400 text-xl mb-1"></i>
+                        <span class="text-xs text-gray-500">收藏</span>
+                    </a>
+                    <a href="profile.html" class="flex flex-col items-center min-w-[64px]">
+                        <i class="far fa-user text-gray-400 text-xl mb-1"></i>
+                        <span class="text-xs text-gray-500">我的</span>
+                    </a>
+                </nav>
+            </div>
+        </footer>
+    </div>
+</body>
+</html> 

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>学习历史 - 学科可视化教学平台</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <div class="app-container mx-auto min-h-screen relative max-w-[393px]">
+        <!-- 顶部导航栏 -->
+        <header class="bg-white shadow-sm sticky top-0 z-10">
+            <div class="px-4 py-4 flex items-center">
+                <a href="profile.html" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 mr-2">
+                    <i class="fas fa-arrow-left text-gray-500"></i>
+                </a>
+                <h1 class="text-xl font-bold text-gray-800">学习历史</h1>
+                <div class="ml-auto">
+                    <button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100">
+                        <i class="fas fa-filter text-gray-500"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main class="px-4 py-4 pb-28">
+            <!-- 历史统计 -->
+            <section class="bg-white rounded-xl p-4 shadow-sm mb-6">
+                <div class="flex items-center justify-between mb-4">
+                    <h2 class="text-lg font-medium text-gray-800">学习概览</h2>
+                    <div class="text-sm text-blue-500">本月</div>
+                </div>
+                <div class="grid grid-cols-3 gap-4 mb-2">
+                    <div class="text-center">
+                        <div class="text-xl font-medium text-blue-500">12</div>
+                        <p class="text-xs text-gray-500 mt-1">学习次数</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-xl font-medium text-green-500">6</div>
+                        <p class="text-xs text-gray-500 mt-1">完成实验</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-xl font-medium text-purple-500">8.5h</div>
+                        <p class="text-xs text-gray-500 mt-1">学习时长</p>
+                    </div>
+                </div>
+                
+                <!-- 学习热图（简化版） -->
+                <div class="mt-4">
+                    <div class="text-xs text-gray-500 mb-2">学习频率</div>
+                    <div class="h-8 bg-gray-100 rounded-lg overflow-hidden flex">
+                        <div class="bg-blue-200 h-full flex-1"></div>
+                        <div class="bg-blue-300 h-full flex-1"></div>
+                        <div class="bg-blue-400 h-full flex-1"></div>
+                        <div class="bg-blue-500 h-full flex-1"></div>
+                        <div class="bg-blue-600 h-full flex-1"></div>
+                        <div class="bg-blue-400 h-full flex-1"></div>
+                        <div class="bg-blue-300 h-full flex-1"></div>
+                    </div>
+                    <div class="flex justify-between text-xs text-gray-500 mt-1">
+                        <div>周一</div>
+                        <div>周二</div>
+                        <div>周三</div>
+                        <div>周四</div>
+                        <div>周五</div>
+                        <div>周六</div>
+                        <div>周日</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 学科分类标签 -->
+            <section class="mb-4 overflow-x-auto scrollbar-hide">
+                <div class="flex space-x-2 pb-1">
+                    <button class="flex-shrink-0 bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium">
+                        全部
+                    </button>
+                    <button class="flex-shrink-0 bg-white text-gray-700 px-4 py-2 rounded-full text-sm font-medium">
+                        物理
+                    </button>
+                    <button class="flex-shrink-0 bg-white text-gray-700 px-4 py-2 rounded-full text-sm font-medium">
+                        化学
+                    </button>
+                    <button class="flex-shrink-0 bg-white text-gray-700 px-4 py-2 rounded-full text-sm font-medium">
+                        生物
+                    </button>
+                    <button class="flex-shrink-0 bg-white text-gray-700 px-4 py-2 rounded-full text-sm font-medium">
+                        地球科学
+                    </button>
+                </div>
+            </section>
+
+            <!-- 历史按日期分组 -->
+            <section>
+                <!-- 今天 -->
+                <div class="mb-6">
+                    <div class="flex items-center mb-3">
+                        <h3 class="text-base font-medium text-gray-800">今天</h3>
+                        <div class="ml-2 text-xs text-gray-500">2023-08-16</div>
+                    </div>
+                    
+                    <div class="space-y-3">
+                        <div class="bg-white p-3 rounded-xl shadow-sm flex items-center">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-arrow-right text-blue-500"></i>
+                            </div>
+                            <div class="ml-3 flex-1">
+                                <h4 class="text-sm font-medium text-gray-800">牛顿第二定律</h4>
+                                <div class="flex items-center mt-1">
+                                    <div class="text-xs text-gray-500">学习时长: 45分钟</div>
+                                    <div class="bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded ml-2">已完成</div>
+                                </div>
+                            </div>
+                            <a href="newton-second-law.html" class="text-blue-500">
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 昨天 -->
+                <div class="mb-6">
+                    <div class="flex items-center mb-3">
+                        <h3 class="text-base font-medium text-gray-800">昨天</h3>
+                        <div class="ml-2 text-xs text-gray-500">2023-08-15</div>
+                    </div>
+                    
+                    <div class="space-y-3">
+                        <div class="bg-white p-3 rounded-xl shadow-sm flex items-center">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-exchange-alt text-blue-500"></i>
+                            </div>
+                            <div class="ml-3 flex-1">
+                                <h4 class="text-sm font-medium text-gray-800">单摆实验</h4>
+                                <div class="flex items-center mt-1">
+                                    <div class="text-xs text-gray-500">学习时长: 1小时</div>
+                                    <div class="bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded ml-2">已完成</div>
+                                </div>
+                            </div>
+                            <a href="pendulum.html" class="text-blue-500">
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                        
+                        <div class="bg-white p-3 rounded-xl shadow-sm flex items-center">
+                            <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-microscope text-purple-500"></i>
+                            </div>
+                            <div class="ml-3 flex-1">
+                                <h4 class="text-sm font-medium text-gray-800">细胞观察</h4>
+                                <div class="flex items-center mt-1">
+                                    <div class="text-xs text-gray-500">学习时长: 30分钟</div>
+                                    <div class="bg-yellow-100 text-yellow-700 text-xs px-2 py-0.5 rounded ml-2">进行中</div>
+                                </div>
+                            </div>
+                            <a href="cell-observation.html" class="text-blue-500">
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 前天 -->
+                <div class="mb-6">
+                    <div class="flex items-center mb-3">
+                        <h3 class="text-base font-medium text-gray-800">2023-08-14</h3>
+                    </div>
+                    
+                    <div class="space-y-3">
+                        <div class="bg-white p-3 rounded-xl shadow-sm flex items-center">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-compress-alt text-blue-500"></i>
+                            </div>
+                            <div class="ml-3 flex-1">
+                                <h4 class="text-sm font-medium text-gray-800">弹簧振子</h4>
+                                <div class="flex items-center mt-1">
+                                    <div class="text-xs text-gray-500">学习时长: 55分钟</div>
+                                    <div class="bg-yellow-100 text-yellow-700 text-xs px-2 py-0.5 rounded ml-2">进行中</div>
+                                </div>
+                            </div>
+                            <a href="spring-oscillator.html" class="text-blue-500">
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 本周早些时候 -->
+                <div class="mb-6">
+                    <div class="flex items-center mb-3">
+                        <h3 class="text-base font-medium text-gray-800">本周早些时候</h3>
+                    </div>
+                    
+                    <div class="space-y-3">
+                        <div class="bg-white p-3 rounded-xl shadow-sm flex items-center">
+                            <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-wave-square text-yellow-500"></i>
+                            </div>
+                            <div class="ml-3 flex-1">
+                                <h4 class="text-sm font-medium text-gray-800">机械波实验</h4>
+                                <div class="flex items-center mt-1">
+                                    <div class="text-xs text-gray-500">2023-08-12 · 40分钟</div>
+                                    <div class="bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded ml-2">已完成</div>
+                                </div>
+                            </div>
+                            <a href="mechanical-waves.html" class="text-blue-500">
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                        
+                        <div class="bg-white p-3 rounded-xl shadow-sm flex items-center">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-atom text-blue-500"></i>
+                            </div>
+                            <div class="ml-3 flex-1">
+                                <h4 class="text-sm font-medium text-gray-800">牛顿摆实验</h4>
+                                <div class="flex items-center mt-1">
+                                    <div class="text-xs text-gray-500">2023-08-10 · 1小时10分钟</div>
+                                    <div class="bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded ml-2">已完成</div>
+                                </div>
+                            </div>
+                            <a href="newton-cradle.html" class="text-blue-500">
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 更早时间 -->
+                <div>
+                    <div class="flex items-center mb-3">
+                        <h3 class="text-base font-medium text-gray-800">更早</h3>
+                    </div>
+                    
+                    <div class="space-y-3">
+                        <div class="bg-white p-3 rounded-xl shadow-sm flex items-center">
+                            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-flask text-green-500"></i>
+                            </div>
+                            <div class="ml-3 flex-1">
+                                <h4 class="text-sm font-medium text-gray-800">酸碱中和反应</h4>
+                                <div class="flex items-center mt-1">
+                                    <div class="text-xs text-gray-500">2023-08-01 · 50分钟</div>
+                                    <div class="bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded ml-2">已完成</div>
+                                </div>
+                            </div>
+                            <a href="acid-base-reaction.html" class="text-blue-500">
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                        
+                        <div class="bg-white p-3 rounded-xl shadow-sm flex items-center">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-lightbulb text-blue-500"></i>
+                            </div>
+                            <div class="ml-3 flex-1">
+                                <h4 class="text-sm font-medium text-gray-800">光的干涉</h4>
+                                <div class="flex items-center mt-1">
+                                    <div class="text-xs text-gray-500">2023-07-25 · 1小时15分钟</div>
+                                    <div class="bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded ml-2">已完成</div>
+                                </div>
+                            </div>
+                            <a href="light-interference.html" class="text-blue-500">
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 查看更多按钮 -->
+            <div class="mt-6 text-center">
+                <button class="px-5 py-2 bg-gray-100 text-gray-700 rounded-lg text-sm font-medium">
+                    加载更多
+                </button>
+            </div>
+        </main>
+        
+        <!-- 底部导航栏 -->
+        <footer class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 rounded-t-3xl safe-area-bottom">
+            <div class="mx-auto max-w-[393px]">
+                <nav class="flex justify-around items-center px-8 py-4">
+                    <a href="index.html" class="flex flex-col items-center min-w-[64px]">
+                        <i class="fas fa-home text-gray-400 text-xl mb-1"></i>
+                        <span class="text-xs text-gray-500">首页</span>
+                    </a>
+                    <a href="explore.html" class="flex flex-col items-center min-w-[64px]">
+                        <i class="fas fa-compass text-gray-400 text-xl mb-1"></i>
+                        <span class="text-xs text-gray-500">探索</span>
+                    </a>
+                    <a href="favorites.html" class="flex flex-col items-center min-w-[64px]">
+                        <i class="far fa-bookmark text-gray-400 text-xl mb-1"></i>
+                        <span class="text-xs text-gray-500">收藏</span>
+                    </a>
+                    <a href="profile.html" class="flex flex-col items-center min-w-[64px]">
+                        <i class="far fa-user text-gray-400 text-xl mb-1"></i>
+                        <span class="text-xs text-gray-500">我的</span>
+                    </a>
+                </nav>
+            </div>
+        </footer>
+    </div>
+</body>
+</html> 

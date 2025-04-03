@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>波的干涉 - 学科可视化教学平台</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <div class="app-container mx-auto min-h-screen relative max-w-[393px]">
+        <!-- 顶部导航栏 -->
+        <header class="bg-white shadow-sm sticky top-0 z-10">
+            <div class="px-4 py-4 flex items-center">
+                <a href="physics-catalog.html" class="mr-4">
+                    <i class="fas fa-arrow-left text-gray-600"></i>
+                </a>
+                <h1 class="text-xl font-bold text-gray-800">波的干涉</h1>
+            </div>
+        </header>
+
+        <!-- 主内容区 -->
+        <main class="px-4 py-4 pb-28">
+            <!-- 实验模型选择 -->
+            <section class="bg-white rounded-xl p-6 shadow-sm mb-6">
+                <h2 class="text-lg font-bold text-gray-800 mb-4">选择实验模型</h2>
+                <div class="grid grid-cols-2 gap-4">
+                    <button class="bg-blue-50 rounded-xl p-4 text-center hover:bg-blue-100 transition-all group">
+                        <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:bg-blue-200">
+                            <i class="fas fa-water text-blue-500 text-xl"></i>
+                        </div>
+                        <span class="text-sm font-medium text-gray-800">水波干涉</span>
+                    </button>
+                    
+                    <button class="bg-green-50 rounded-xl p-4 text-center hover:bg-green-100 transition-all group">
+                        <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:bg-green-200">
+                            <i class="fas fa-wave-square text-green-500 text-xl"></i>
+                        </div>
+                        <span class="text-sm font-medium text-gray-800">机械波叠加</span>
+                    </button>
+                    
+                    <button class="bg-yellow-50 rounded-xl p-4 text-center hover:bg-yellow-100 transition-all group">
+                        <div class="w-12 h-12 bg-yellow-100 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:bg-yellow-200">
+                            <i class="fas fa-volume-up text-yellow-500 text-xl"></i>
+                        </div>
+                        <span class="text-sm font-medium text-gray-800">声波干涉</span>
+                    </button>
+                    
+                    <button class="bg-purple-50 rounded-xl p-4 text-center hover:bg-purple-100 transition-all group">
+                        <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:bg-purple-200">
+                            <i class="fas fa-lightbulb text-purple-500 text-xl"></i>
+                        </div>
+                        <span class="text-sm font-medium text-gray-800">光波干涉</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- 基本原理 -->
+            <section class="bg-white rounded-xl p-6 shadow-sm mb-6">
+                <h2 class="text-lg font-bold text-gray-800 mb-4">基本原理</h2>
+                <div class="space-y-4">
+                    <div class="bg-gray-50 rounded-xl p-4">
+                        <h3 class="text-base font-medium text-gray-800 mb-2">波的叠加原理</h3>
+                        <p class="text-sm text-gray-600">
+                            当两列或多列波在空间相遇时，各点的位移等于各列波在该点位移的代数和。
+                        </p>
+                    </div>
+                    <div class="bg-gray-50 rounded-xl p-4">
+                        <h3 class="text-base font-medium text-gray-800 mb-2">相干波条件</h3>
+                        <ul class="text-sm text-gray-600 space-y-2 list-disc pl-4">
+                            <li>频率相同</li>
+                            <li>振动方向相同</li>
+                            <li>相位差恒定</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 rounded-xl p-4">
+                        <h3 class="text-base font-medium text-gray-800 mb-2">干涉条纹</h3>
+                        <p class="text-sm text-gray-600">
+                            相干波叠加产生的明暗相间或强弱相间的条纹。
+                        </p>
+                        <div class="mt-2 p-2 bg-blue-50 rounded-lg text-center">
+                            <span class="font-mono text-blue-600">Δr = kλ (k = 0, ±1, ±2, ...)</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 应用场景 -->
+            <section class="bg-white rounded-xl p-6 shadow-sm mb-6">
+                <h2 class="text-lg font-bold text-gray-800 mb-4">应用场景</h2>
+                <div class="space-y-3">
+                    <div class="flex items-start">
+                        <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+                            <i class="fas fa-ruler-combined text-blue-500"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-base font-medium text-gray-800 mb-1">精密测量</h3>
+                            <p class="text-sm text-gray-600">
+                                利用干涉条纹测量微小位移和波长。
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+                            <i class="fas fa-film text-green-500"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-base font-medium text-gray-800 mb-1">薄膜涂层</h3>
+                            <p class="text-sm text-gray-600">
+                                光学镀膜和防反射涂层的设计。
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="w-10 h-10 bg-yellow-100 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+                            <i class="fas fa-broadcast-tower text-yellow-500"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-base font-medium text-gray-800 mb-1">通信技术</h3>
+                            <p class="text-sm text-gray-600">
+                                无线通信中的波束形成和信号增强。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 实验要求 -->
+            <section class="bg-white rounded-xl p-6 shadow-sm mb-24">
+                <h2 class="text-lg font-bold text-gray-800 mb-4">实验要求</h2>
+                <div class="space-y-3">
+                    <div class="flex items-center text-sm text-gray-600">
+                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                        <span>观察干涉图样的形成</span>
+                    </div>
+                    <div class="flex items-center text-sm text-gray-600">
+                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                        <span>测量波长和相位差</span>
+                    </div>
+                    <div class="flex items-center text-sm text-gray-600">
+                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                        <span>分析影响因素</span>
+                    </div>
+                    <div class="flex items-center text-sm text-gray-600">
+                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                        <span>验证干涉公式</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- 开始实验按钮 -->
+        <div class="fixed bottom-24 left-4 right-4 max-w-[393px] mx-auto z-10">
+            <a href="wave-interference-experiment.html" class="block bg-blue-500 text-white text-center py-4 rounded-xl font-medium shadow-lg hover:bg-blue-600 transition-all">
+                开始实验
+            </a>
+        </div>
+
+        <!-- 底部导航栏 -->
+        <footer class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 rounded-t-3xl safe-area-bottom">
+            <div class="mx-auto max-w-[393px]">
+                <nav class="flex justify-around items-center px-8 py-4">
+                    <a href="index.html" class="flex flex-col items-center min-w-[64px]">
+                        <i class="fas fa-home text-gray-400 text-xl mb-1"></i>
+                        <span class="text-xs text-gray-500">首页</span>
+                    </a>
+                    <a href="explore.html" class="flex flex-col items-center min-w-[64px]">
+                        <i class="fas fa-compass text-gray-400 text-xl mb-1"></i>
+                        <span class="text-xs text-gray-500">探索</span>
+                    </a>
+                    <a href="favorites.html" class="flex flex-col items-center min-w-[64px]">
+                        <i class="far fa-bookmark text-gray-400 text-xl mb-1"></i>
+                        <span class="text-xs text-gray-500">收藏</span>
+                    </a>
+                    <a href="profile.html" class="flex flex-col items-center min-w-[64px]">
+                        <i class="far fa-user text-gray-400 text-xl mb-1"></i>
+                        <span class="text-xs text-gray-500">我的</span>
+                    </a>
+                </nav>
+            </div>
+        </footer>
+    </div>
+</body>
+</html> 

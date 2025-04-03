@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>交叉领域与实验技能 - 物理可视化教学平台</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+    <div class="app-container mx-auto bg-gray-50 min-h-screen relative max-w-[393px]">
+        <!-- 顶部导航栏 -->
+        <header class="bg-white shadow-sm px-4 py-3 sticky top-0 z-10">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-gray-600 mr-4">
+                        <i class="fas fa-arrow-left text-lg"></i>
+                    </a>
+                    <h1 class="text-xl font-medium text-gray-800">交叉领域与实验技能</h1>
+                </div>
+                <div>
+                    <a href="index.html" class="text-gray-600">
+                        <i class="fas fa-home text-lg"></i>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- 主内容区 -->
+        <main class="px-4 py-4 pb-28">
+            <!-- 学科介绍 -->
+            <section class="mb-6">
+                <h2 class="text-lg font-medium text-gray-800 mb-3">交叉领域与实验技能概述</h2>
+                <p class="text-sm text-gray-600 mb-3">
+                    交叉领域研究将物理原理应用于其他学科，如生物物理、化学物理等；实验技能则包括数据分析、实验设计和科学方法论等基本能力。
+                </p>
+                <div class="bg-red-50 rounded-xl p-4">
+                    <h3 class="text-base font-medium text-red-800 mb-2">学习内容</h3>
+                    <ul class="text-sm text-gray-700 space-y-1">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-red-500 mt-0.5 mr-2"></i>
+                            <span>数据分析与实验误差</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-red-500 mt-0.5 mr-2"></i>
+                            <span>实验设计与科学方法</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-red-500 mt-0.5 mr-2"></i>
+                            <span>物理学在生物学中的应用</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-red-500 mt-0.5 mr-2"></i>
+                            <span>物理模型在环境科学中的应用</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 搜索和筛选 -->
+            <section class="mb-6">
+                <div class="relative mb-4">
+                    <input type="text" placeholder="搜索交叉领域模块..." class="w-full py-2 px-4 pr-10 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent">
+                    <button class="absolute right-3 top-2 text-gray-500">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                
+                <div class="flex space-x-2 mb-4 overflow-x-auto pb-2">
+                    <button class="px-3 py-1 bg-red-500 text-white rounded-full text-sm whitespace-nowrap">
+                        全部
+                    </button>
+                    <button class="px-3 py-1 bg-white border border-gray-300 text-gray-700 rounded-full text-sm whitespace-nowrap">
+                        初级
+                    </button>
+                    <button class="px-3 py-1 bg-white border border-gray-300 text-gray-700 rounded-full text-sm whitespace-nowrap">
+                        中级
+                    </button>
+                    <button class="px-3 py-1 bg-white border border-gray-300 text-gray-700 rounded-full text-sm whitespace-nowrap">
+                        高级
+                    </button>
+                    <button class="px-3 py-1 bg-white border border-gray-300 text-gray-700 rounded-full text-sm whitespace-nowrap">
+                        数据分析
+                    </button>
+                    <button class="px-3 py-1 bg-white border border-gray-300 text-gray-700 rounded-full text-sm whitespace-nowrap">
+                        生物物理
+                    </button>
+                </div>
+            </section>
+
+            <!-- 交叉领域模块列表 -->
+            <section>
+                <h3 class="text-lg font-medium text-gray-800 mb-4">交叉领域模块</h3>
+                
+                <!-- 数据分析与可视化 -->
+                <div class="bg-white rounded-xl shadow-sm p-4 mb-4">
+                    <div class="flex">
+                        <div class="w-20 h-20 bg-red-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-chart-bar text-red-500 text-2xl"></i>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex justify-between items-start mb-1">
+                                <h4 class="text-base font-medium text-gray-800">数据分析与可视化</h4>
+                                <span class="bg-green-100 text-green-800 text-xs px-2 py-0.5 rounded-full">初级</span>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-3">
+                                学习如何分析实验数据、绘制图表，并理解误差分析与统计方法。
+                            </p>
+                            <a href="#" class="inline-block bg-red-500 text-white px-4 py-2 rounded-lg text-sm font-medium">
+                                开始学习
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 实验设计方法 -->
+                <div class="bg-white rounded-xl shadow-sm p-4 mb-4">
+                    <div class="flex">
+                        <div class="w-20 h-20 bg-red-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-tasks text-red-500 text-2xl"></i>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex justify-between items-start mb-1">
+                                <h4 class="text-base font-medium text-gray-800">实验设计方法</h4>
+                                <span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-0.5 rounded-full">中级</span>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-3">
+                                掌握科学实验的设计原则，包括变量控制、实验重复性和结果验证方法。
+                            </p>
+                            <a href="#" class="inline-block bg-red-500 text-white px-4 py-2 rounded-lg text-sm font-medium">
+                                开始学习
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 生物物理学应用 -->
+                <div class="bg-white rounded-xl shadow-sm p-4 mb-4">
+                    <div class="flex">
+                        <div class="w-20 h-20 bg-red-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-dna text-red-500 text-2xl"></i>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex justify-between items-start mb-1">
+                                <h4 class="text-base font-medium text-gray-800">生物物理学应用</h4>
+                                <span class="bg-red-100 text-red-800 text-xs px-2 py-0.5 rounded-full">高级</span>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-3">
+                                探索物理原理在生物系统中的应用，如细胞膜电势、DNA结构和分子力学。
+                            </p>
+                            <a href="#" class="inline-block bg-red-500 text-white px-4 py-2 rounded-lg text-sm font-medium">
+                                开始学习
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 环境物理模型 -->
+                <div class="bg-white rounded-xl shadow-sm p-4">
+                    <div class="flex">
+                        <div class="w-20 h-20 bg-red-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-leaf text-red-500 text-2xl"></i>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex justify-between items-start mb-1">
+                                <h4 class="text-base font-medium text-gray-800">环境物理模型</h4>
+                                <span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-0.5 rounded-full">中级</span>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-3">
+                                学习物理学在环境科学中的应用，包括热扩散、流体动力学和辐射传输模型。
+                            </p>
+                            <a href="#" class="inline-block bg-red-500 text-white px-4 py-2 rounded-lg text-sm font-medium">
+                                开始学习
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 技能分类 -->
+            <section class="bg-white rounded-iphone p-6 shadow-sm mb-6">
+                <h2 class="text-lg font-medium text-gray-800 mb-4">跨学科技能</h2>
+                <div class="grid grid-cols-2 gap-4">
+                    <button class="bg-blue-50 rounded-xl p-4 text-center hover:bg-blue-100 transition-all group">
+                        <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:bg-blue-200">
+                            <i class="fas fa-chart-line text-blue-500 text-xl"></i>
+                        </div>
+                        <span class="text-sm font-medium text-gray-800">数据分析</span>
+                    </button>
+                    
+                    <button class="bg-green-50 rounded-xl p-4 text-center hover:bg-green-100 transition-all group">
+                        <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:bg-green-200">
+                            <i class="fas fa-flask text-green-500 text-xl"></i>
+                        </div>
+                        <span class="text-sm font-medium text-gray-800">实验设计</span>
+                    </button>
+                </div>
+            </section>
+        </main>
+
+        <!-- 底部导航栏 -->
+        <footer class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 rounded-t-iphone max-w-[393px] mx-auto z-20">
+            <div class="footer-safe-area">
+                <nav class="flex justify-around items-center px-6 py-4">
+                    <a href="index.html" class="flex flex-col items-center">
+                        <i class="fas fa-home text-gray-400 text-xl mb-1"></i>
+                        <span class="text-xs text-gray-500">首页</span>
+                    </a>
+                    <a href="explore.html" class="flex flex-col items-center">
+                        <i class="fas fa-compass text-gray-400 text-xl mb-1"></i>
+                        <span class="text-xs text-gray-500">探索</span>
+                    </a>
+                    <a href="favorites.html" class="flex flex-col items-center">
+                        <i class="far fa-bookmark text-gray-400 text-xl mb-1"></i>
+                        <span class="text-xs text-gray-500">收藏</span>
+                    </a>
+                    <a href="profile.html" class="flex flex-col items-center">
+                        <i class="far fa-user text-gray-400 text-xl mb-1"></i>
+                        <span class="text-xs text-gray-500">我的</span>
+                    </a>
+                </nav>
+            </div>
+        </footer>
+    </div>
+</body>
+</html> 

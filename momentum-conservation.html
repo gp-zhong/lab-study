@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动量守恒 - 物理可视化教学平台</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+    <div class="app-container mx-auto bg-gray-50 min-h-screen relative max-w-[393px]">
+        <!-- 顶部导航栏 -->
+        <header class="bg-white shadow-sm px-4 py-3 sticky top-0 z-10">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <a href="mechanics.html" class="text-gray-600 mr-4">
+                        <i class="fas fa-arrow-left text-lg"></i>
+                    </a>
+                    <h1 class="text-xl font-medium text-gray-800">动量守恒</h1>
+                </div>
+                <div>
+                    <a href="index.html" class="text-gray-600">
+                        <i class="fas fa-home text-lg"></i>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- 主内容区 -->
+        <main class="px-4 py-4 pb-28">
+            <!-- 实验可视化区域 -->
+            <section class="mb-6">
+                <div class="bg-blue-50 rounded-xl h-48 flex items-center justify-center mb-4">
+                    <div class="relative h-full w-full flex items-center justify-center">
+                        <div class="absolute w-16 h-16 bg-blue-500 rounded-full left-16"></div>
+                        <div class="absolute w-10 h-10 bg-red-500 rounded-full right-16"></div>
+                        <i class="fas fa-exchange-alt text-gray-400 text-3xl"></i>
+                    </div>
+                </div>
+                <div class="flex justify-center mb-4">
+                    <button class="bg-blue-500 text-white px-6 py-2 rounded-lg font-medium shadow-md hover:bg-blue-600 transition duration-300">
+                        开始实验
+                    </button>
+                </div>
+            </section>
+
+            <!-- 选择实验模型 -->
+            <section class="mb-6">
+                <h2 class="text-lg font-medium text-gray-800 mb-3">选择实验模型</h2>
+                <div class="grid grid-cols-2 gap-3">
+                    <div class="bg-white rounded-xl shadow-sm p-3 hover:shadow-md transition duration-300 cursor-pointer border-2 border-blue-500">
+                        <div class="flex flex-col items-center">
+                            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-2">
+                                <i class="fas fa-arrows-alt-h text-blue-500"></i>
+                            </div>
+                            <span class="text-sm font-medium text-gray-800">一维碰撞</span>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-sm p-3 hover:shadow-md transition duration-300 cursor-pointer">
+                        <div class="flex flex-col items-center">
+                            <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mb-2">
+                                <i class="fas fa-object-group text-gray-500"></i>
+                            </div>
+                            <span class="text-sm font-medium text-gray-800">二维碰撞</span>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-sm p-3 hover:shadow-md transition duration-300 cursor-pointer">
+                        <div class="flex flex-col items-center">
+                            <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mb-2">
+                                <i class="fas fa-cogs text-gray-500"></i>
+                            </div>
+                            <span class="text-sm font-medium text-gray-800">牛顿摆</span>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-sm p-3 hover:shadow-md transition duration-300 cursor-pointer">
+                        <div class="flex flex-col items-center">
+                            <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mb-2">
+                                <i class="fas fa-rocket text-gray-500"></i>
+                            </div>
+                            <span class="text-sm font-medium text-gray-800">爆炸模型</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 实验基本原理 -->
+            <section class="mb-6 bg-white rounded-xl shadow-sm p-4">
+                <h2 class="text-lg font-medium text-gray-800 mb-3">基本原理</h2>
+                <p class="text-sm text-gray-600 mb-3">
+                    动量守恒定律是物理学中的基本守恒定律之一，表明在没有外力作用的封闭系统中，总动量保持不变。动量是质量与速度的乘积（$\vec{p} = m\vec{v}$）。
+                </p>
+                <div class="bg-blue-50 rounded-lg p-3 mb-3">
+                    <h3 class="text-base font-medium text-blue-800 mb-2">动量守恒的数学表达式</h3>
+                    <p class="text-sm text-gray-700 mb-2">对于一个封闭系统，初始总动量等于末态总动量：</p>
+                    <div class="bg-white rounded p-2 text-center text-blue-800 font-mono">
+                        m₁v₁ + m₂v₂ = m₁v₁' + m₂v₂'
+                    </div>
+                </div>
+                <p class="text-sm text-gray-600">
+                    当物体发生碰撞时，无论是弹性碰撞还是非弹性碰撞，动量守恒定律都成立。在弹性碰撞中，动能也守恒；而在非弹性碰撞中，部分动能会转化为其他形式的能量。
+                </p>
+            </section>
+
+            <!-- 应用场景 -->
+            <section class="mb-6 bg-white rounded-xl shadow-sm p-4">
+                <h2 class="text-lg font-medium text-gray-800 mb-3">应用场景</h2>
+                <div class="space-y-3">
+                    <div class="flex items-start">
+                        <div class="w-10 h-10 bg-blue-100 rounded-full flex-shrink-0 flex items-center justify-center mr-3">
+                            <i class="fas fa-car-crash text-blue-500"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-base font-medium text-gray-800 mb-1">碰撞分析</h3>
+                            <p class="text-sm text-gray-600">
+                                交通事故分析中，利用动量守恒原理推算碰撞前后车辆的速度和方向。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-10 h-10 bg-blue-100 rounded-full flex-shrink-0 flex items-center justify-center mr-3">
+                            <i class="fas fa-rocket text-blue-500"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-base font-medium text-gray-800 mb-1">火箭推进</h3>
+                            <p class="text-sm text-gray-600">
+                                火箭喷射燃烧产物获得推力，根据动量守恒原理，火箭会向相反方向运动。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-10 h-10 bg-blue-100 rounded-full flex-shrink-0 flex items-center justify-center mr-3">
+                            <i class="fas fa-bowling-ball text-blue-500"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-base font-medium text-gray-800 mb-1">运动与游戏</h3>
+                            <p class="text-sm text-gray-600">
+                                台球、保龄球等运动中，球体之间的碰撞完美展示了动量守恒原理。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 关键概念 -->
+            <section class="bg-white rounded-xl shadow-sm p-4 mb-4">
+                <h2 class="text-lg font-medium text-gray-800 mb-3">关键概念</h2>
+                <div class="space-y-3">
+                    <div class="bg-gray-50 rounded-lg p-3">
+                        <h3 class="text-base font-medium text-gray-800 mb-1">动量</h3>
+                        <p class="text-sm text-gray-600">
+                            物体质量与速度的乘积，是一个矢量，具有大小和方向。
+                        </p>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-3">
+                        <h3 class="text-base font-medium text-gray-800 mb-1">冲量</h3>
+                        <p class="text-sm text-gray-600">
+                            力与作用时间的乘积，等于动量的变化量。
+                        </p>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-3">
+                        <h3 class="text-base font-medium text-gray-800 mb-1">弹性系数</h3>
+                        <p class="text-sm text-gray-600">
+                            表示碰撞过程中的能量保持程度，从0（完全非弹性）到1（完全弹性）。
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 开始实验按钮 -->
+            <div class="fixed bottom-24 left-4 right-4 max-w-[393px] mx-auto z-10">
+                <a href="momentum-experiment.html" class="block bg-blue-500 text-white text-center py-4 rounded-iphone font-medium shadow-lg hover:bg-blue-600 transition-all">
+                    开始实验
+                </a>
+            </div>
+        </main>
+
+        <!-- 底部导航栏 -->
+        <footer class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 rounded-t-iphone max-w-[393px] mx-auto z-20">
+            <div class="footer-safe-area">
+                <nav class="flex justify-around items-center px-6 py-4">
+                    <a href="index.html" class="flex flex-col items-center">
+                        <i class="fas fa-home text-gray-400 text-xl mb-1"></i>
+                        <span class="text-xs text-gray-500">首页</span>
+                    </a>
+                    <a href="explore.html" class="flex flex-col items-center">
+                        <i class="fas fa-compass text-gray-400 text-xl mb-1"></i>
+                        <span class="text-xs text-gray-500">探索</span>
+                    </a>
+                    <a href="favorites.html" class="flex flex-col items-center">
+                        <i class="far fa-bookmark text-gray-400 text-xl mb-1"></i>
+                        <span class="text-xs text-gray-500">收藏</span>
+                    </a>
+                    <a href="profile.html" class="flex flex-col items-center">
+                        <i class="far fa-user text-gray-400 text-xl mb-1"></i>
+                        <span class="text-xs text-gray-500">我的</span>
+                    </a>
+                </nav>
+            </div>
+        </footer>
+    </div>
+</body>
+</html> 

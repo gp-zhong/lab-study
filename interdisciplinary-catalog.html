@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>交叉学科实验 - 学科可视化教学平台</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <div class="app-container mx-auto min-h-screen relative max-w-[393px]">
+        <!-- 顶部导航 -->
+        <header class="px-4 pt-5 pb-4 flex items-center">
+            <a href="index.html" class="p-2 -ml-2 text-gray-700">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+            <h1 class="text-xl font-bold text-gray-800 ml-2">交叉学科实验</h1>
+        </header>
+
+        <main class="px-4 pb-28">
+            <!-- 搜索栏 -->
+            <div class="mb-5">
+                <div class="relative">
+                    <input type="search" placeholder="搜索交叉学科实验" 
+                           class="w-full pl-10 pr-4 py-3 rounded-xl bg-white border border-gray-200 text-sm">
+                    <i class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                </div>
+            </div>
+
+            <!-- 筛选选项 -->
+            <div class="mb-5 overflow-x-auto py-1">
+                <div class="flex space-x-2 min-w-max">
+                    <button class="px-3 py-2 bg-indigo-500 text-white rounded-lg text-sm font-medium">
+                        全部
+                    </button>
+                    <button class="px-3 py-2 bg-gray-100 text-gray-700 rounded-lg text-sm font-medium">
+                        物理化学
+                    </button>
+                    <button class="px-3 py-2 bg-gray-100 text-gray-700 rounded-lg text-sm font-medium">
+                        生物物理
+                    </button>
+                    <button class="px-3 py-2 bg-gray-100 text-gray-700 rounded-lg text-sm font-medium">
+                        生物化学
+                    </button>
+                    <button class="px-3 py-2 bg-gray-100 text-gray-700 rounded-lg text-sm font-medium">
+                        地球科学
+                    </button>
+                </div>
+            </div>
+
+            <!-- 实验列表 -->
+            <section class="space-y-4">
+                <!-- 物理化学实验组 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm">
+                    <div class="p-3 bg-indigo-50 border-b border-indigo-100">
+                        <h2 class="font-medium text-indigo-800">物理化学</h2>
+                    </div>
+                    
+                    <a href="electrolysis.html" class="block p-4 border-b border-gray-100">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-bolt text-lg text-indigo-500"></i>
+                            </div>
+                            <div class="ml-3 flex-1">
+                                <h3 class="text-base font-medium text-gray-800">电解实验</h3>
+                                <p class="text-xs text-gray-500 mt-1">研究法拉第电解定律与电极反应</p>
+                            </div>
+                            <i class="fas fa-chevron-right text-gray-300"></i>
+                        </div>
+                    </a>
+                    
+                    <a href="thermochemistry.html" class="block p-4">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-fire text-lg text-indigo-500"></i>
+                            </div>
+                            <div class="ml-3 flex-1">
+                                <h3 class="text-base font-medium text-gray-800">热化学反应</h3>
+                                <p class="text-xs text-gray-500 mt-1">探究放热反应与吸热反应</p>
+                            </div>
+                            <i class="fas fa-chevron-right text-gray-300"></i>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- 生物物理实验组 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm">
+                    <div class="p-3 bg-violet-50 border-b border-violet-100">
+                        <h2 class="font-medium text-violet-800">生物物理</h2>
+                    </div>
+                    
+                    <a href="membrane-potential.html" class="block p-4 border-b border-gray-100">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-violet-100 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-wave-square text-lg text-violet-500"></i>
+                            </div>
+                            <div class="ml-3 flex-1">
+                                <h3 class="text-base font-medium text-gray-800">生物膜电位</h3>
+                                <p class="text-xs text-gray-500 mt-1">研究静息电位与动作电位</p>
+                            </div>
+                            <i class="fas fa-chevron-right text-gray-300"></i>
+                        </div>
+                    </a>
+                    
+                    <a href="biomechanics.html" class="block p-4">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-violet-100 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-bone text-lg text-violet-500"></i>
+                            </div>
+                            <div class="ml-3 flex-1">
+                                <h3 class="text-base font-medium text-gray-800">生物力学</h3>
+                                <p class="text-xs text-gray-500 mt-1">探究骨骼杠杆系统与生长运动</p>
+                            </div>
+                            <i class="fas fa-chevron-right text-gray-300"></i>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- 生物化学实验组 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm mb-6">
+                    <div class="p-3 bg-fuchsia-50 border-b border-fuchsia-100">
+                        <h2 class="font-medium text-fuchsia-800">生物化学</h2>
+                    </div>
+                    
+                    <a href="enzyme-catalysis.html" class="block p-4 border-b border-gray-100">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-fuchsia-100 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-dna text-lg text-fuchsia-500"></i>
+                            </div>
+                            <div class="ml-3 flex-1">
+                                <h3 class="text-base font-medium text-gray-800">酶催化作用</h3>
+                                <p class="text-xs text-gray-500 mt-1">研究酶的结构与催化特性</p>
+                            </div>
+                            <i class="fas fa-chevron-right text-gray-300"></i>
+                        </div>
+                    </a>
+                    
+                    <a href="protein-synthesis.html" class="block p-4">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-fuchsia-100 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-vial text-lg text-fuchsia-500"></i>
+                            </div>
+                            <div class="ml-3 flex-1">
+                                <h3 class="text-base font-medium text-gray-800">蛋白质合成</h3>
+                                <p class="text-xs text-gray-500 mt-1">探究遗传信息的表达过程</p>
+                            </div>
+                            <i class="fas fa-chevron-right text-gray-300"></i>
+                        </div>
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <!-- 底部导航栏 -->
+        <footer class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 rounded-t-3xl safe-area-bottom">
+            <div class="mx-auto max-w-[393px]">
+                <nav class="flex justify-around items-center px-8 py-4">
+                    <a href="index.html" class="flex flex-col items-center min-w-[64px]">
+                        <i class="fas fa-home text-gray-400 text-xl mb-1"></i>
+                        <span class="text-xs text-gray-500">首页</span>
+                    </a>
+                    <a href="explore.html" class="flex flex-col items-center min-w-[64px]">
+                        <i class="fas fa-compass text-blue-500 text-xl mb-1"></i>
+                        <span class="text-xs text-blue-500">探索</span>
+                    </a>
+                    <a href="favorites.html" class="flex flex-col items-center min-w-[64px]">
+                        <i class="far fa-bookmark text-gray-400 text-xl mb-1"></i>
+                        <span class="text-xs text-gray-500">收藏</span>
+                    </a>
+                    <a href="profile.html" class="flex flex-col items-center min-w-[64px]">
+                        <i class="far fa-user text-gray-400 text-xl mb-1"></i>
+                        <span class="text-xs text-gray-500">我的</span>
+                    </a>
+                </nav>
+            </div>
+        </footer>
+    </div>
+</body>
+</html> 

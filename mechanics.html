@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>力学 - 物理可视化教学平台</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0 auto;
+            min-height: 100vh;
+            background: #F3F4F6;
+        }
+        .safe-area-bottom {
+            padding-bottom: env(safe-area-inset-bottom);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+    <div class="mx-auto max-w-[393px] bg-white min-h-screen pb-16 relative">
+        <!-- 顶部导航栏 -->
+        <header class="bg-white shadow-sm px-4 py-3 sticky top-0 z-10 rounded-b-xl">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-gray-600 mr-4">
+                        <i class="fas fa-arrow-left text-lg"></i>
+                    </a>
+                    <h1 class="text-xl font-bold text-gray-800">力学</h1>
+                </div>
+                <div>
+                    <a href="index.html" class="text-gray-600">
+                        <i class="fas fa-home text-lg"></i>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- 主内容区 -->
+        <main class="px-4 py-4">
+            <!-- 学科介绍 -->
+            <section class="mb-6">
+                <h2 class="text-lg font-bold text-gray-800 mb-3">力学概述</h2>
+                <p class="text-sm text-gray-600 mb-3">
+                    力学是物理学的基础分支，研究物体运动及其与力的关系。牛顿三大定律、能量守恒、动量守恒等重要原理构成了经典力学的核心。
+                </p>
+                <div class="bg-blue-50 rounded-xl p-4">
+                    <h3 class="text-base font-medium text-blue-800 mb-2">学习内容</h3>
+                    <ul class="text-sm text-gray-700 space-y-1">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-500 mt-0.5 mr-2"></i>
+                            <span>牛顿运动定律与受力分析</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-500 mt-0.5 mr-2"></i>
+                            <span>动量守恒与碰撞</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-500 mt-0.5 mr-2"></i>
+                            <span>能量守恒与能量转换</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-500 mt-0.5 mr-2"></i>
+                            <span>万有引力与简谐运动</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 搜索和筛选 -->
+            <section class="mb-6">
+                <div class="relative mb-4">
+                    <input type="text" placeholder="搜索力学实验..." class="w-full py-2 px-4 pr-10 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    <button class="absolute right-3 top-2 text-gray-500">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                
+                <div class="flex space-x-2 mb-4 overflow-x-auto pb-2">
+                    <button class="px-3 py-1 bg-blue-500 text-white rounded-full text-sm whitespace-nowrap">
+                        全部
+                    </button>
+                    <button class="px-3 py-1 bg-white border border-gray-300 text-gray-700 rounded-full text-sm whitespace-nowrap">
+                        初级
+                    </button>
+                    <button class="px-3 py-1 bg-white border border-gray-300 text-gray-700 rounded-full text-sm whitespace-nowrap">
+                        中级
+                    </button>
+                    <button class="px-3 py-1 bg-white border border-gray-300 text-gray-700 rounded-full text-sm whitespace-nowrap">
+                        高级
+                    </button>
+                    <button class="px-3 py-1 bg-white border border-gray-300 text-gray-700 rounded-full text-sm whitespace-nowrap">
+                        牛顿定律
+                    </button>
+                    <button class="px-3 py-1 bg-white border border-gray-300 text-gray-700 rounded-full text-sm whitespace-nowrap">
+                        能量与动量
+                    </button>
+                </div>
+            </section>
+
+            <!-- 力学模块列表 -->
+            <section>
+                <h3 class="text-lg font-bold text-gray-800 mb-4">力学模块</h3>
+                
+                <!-- 动量守恒实验 -->
+                <div class="bg-white rounded-xl shadow-sm p-4 mb-4">
+                    <div class="flex">
+                        <div class="w-20 h-20 bg-blue-100 rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-exchange-alt text-blue-500 text-2xl"></i>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex justify-between items-start mb-1">
+                                <h4 class="text-base font-medium text-gray-800">动量守恒</h4>
+                                <span class="bg-green-100 text-green-800 text-xs px-2 py-0.5 rounded-full">初级</span>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-3">
+                                探索碰撞过程中动量如何守恒，观察不同质量物体碰撞的结果。
+                            </p>
+                            <a href="momentum-conservation.html" class="inline-block bg-blue-500 text-white px-4 py-2 rounded-xl text-sm font-medium">
+                                开始实验
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 斜面运动实验 -->
+                <div class="bg-white rounded-xl shadow-sm p-4 mb-4">
+                    <div class="flex">
+                        <div class="w-20 h-20 bg-blue-100 rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-mountain text-blue-500 text-2xl"></i>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex justify-between items-start mb-1">
+                                <h4 class="text-base font-medium text-gray-800">斜面运动</h4>
+                                <span class="bg-green-100 text-green-800 text-xs px-2 py-0.5 rounded-full">初级</span>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-3">
+                                分析物体在斜面上的受力和运动规律，探索重力分解与摩擦力的影响。
+                            </p>
+                            <a href="inclined-plane.html" class="inline-block bg-blue-500 text-white px-4 py-2 rounded-xl text-sm font-medium">
+                                开始实验
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 能量守恒实验 -->
+                <div class="bg-white rounded-xl shadow-sm p-4 mb-4">
+                    <div class="flex">
+                        <div class="w-20 h-20 bg-blue-100 rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-battery-full text-blue-500 text-2xl"></i>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex justify-between items-start mb-1">
+                                <h4 class="text-base font-medium text-gray-800">能量守恒</h4>
+                                <span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-0.5 rounded-full">中级</span>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-3">
+                                观察动能和势能的相互转化，验证机械能守恒定律。
+                            </p>
+                            <a href="energy-conservation.html" class="inline-block bg-blue-500 text-white px-4 py-2 rounded-xl text-sm font-medium">
+                                开始实验
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 牛顿摆实验 -->
+                <div class="bg-white rounded-xl shadow-sm p-4">
+                    <div class="flex">
+                        <div class="w-20 h-20 bg-blue-100 rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-cogs text-blue-500 text-2xl"></i>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex justify-between items-start mb-1">
+                                <h4 class="text-base font-medium text-gray-800">牛顿摆</h4>
+                                <span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-0.5 rounded-full">中级</span>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-3">
+                                通过牛顿摆模型，直观展示动量守恒与能量传递原理。
+                            </p>
+                            <a href="newtons-cradle.html" class="inline-block bg-blue-500 text-white px-4 py-2 rounded-xl text-sm font-medium">
+                                开始实验
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- 底部导航栏 -->
+        <footer class="fixed bottom-0 w-full bg-white border-t border-gray-200 max-w-[393px] rounded-t-3xl z-20">
+            <div class="flex justify-around items-center px-6 py-4 safe-area-bottom">
+                <a href="index.html" class="flex flex-col items-center min-w-[64px]">
+                    <i class="fas fa-home text-gray-400 text-xl mb-1"></i>
+                    <span class="text-xs text-gray-500">首页</span>
+                </a>
+                <a href="explore.html" class="flex flex-col items-center min-w-[64px]">
+                    <i class="fas fa-compass text-blue-500 text-xl mb-1"></i>
+                    <span class="text-xs text-blue-500">探索</span>
+                </a>
+                <a href="favorites.html" class="flex flex-col items-center min-w-[64px]">
+                    <i class="far fa-bookmark text-gray-400 text-xl mb-1"></i>
+                    <span class="text-xs text-gray-500">收藏</span>
+                </a>
+                <a href="profile.html" class="flex flex-col items-center min-w-[64px]">
+                    <i class="far fa-user text-gray-400 text-xl mb-1"></i>
+                    <span class="text-xs text-gray-500">我的</span>
+                </a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html> 
